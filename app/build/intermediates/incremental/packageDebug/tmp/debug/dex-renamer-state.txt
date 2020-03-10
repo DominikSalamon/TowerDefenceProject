@@ -1,4 +1,4 @@
-#Mon Mar 09 20:47:07 CET 2020
+#Tue Mar 10 20:50:07 CET 2020
 base.0=C\:\\Users\\Adminek\\Desktop\\Projekt\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

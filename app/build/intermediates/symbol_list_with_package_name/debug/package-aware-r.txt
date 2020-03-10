@@ -419,6 +419,8 @@ color bright_foreground_material_light
 color button_material_dark
 color button_material_light
 color colorAccent
+color colorDark
+color colorLight
 color colorMenuButton
 color colorPrimary
 color colorPrimaryDark
@@ -684,6 +686,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable grass
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable notification_action_background
@@ -699,6 +702,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable rounded_button
+drawable tile_grass
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
