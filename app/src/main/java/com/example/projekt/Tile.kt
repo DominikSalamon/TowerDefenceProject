@@ -1,21 +1,38 @@
 package com.example.projekt
-
-import android.content.Context
 import android.graphics.Canvas
-import androidx.appcompat.content.res.AppCompatResources.getDrawable
-import java.lang.Exception
 
 
-class Tile(private var posX: Int, private var posY: Int,private var tileSize: Int){
+abstract class Tile(protected var posX: Int, protected var posY: Int,protected var tileSize: Int){
+   abstract fun draw(canvas : Canvas,drawables: Drawables)
+}
 
-    fun draw(canvas : Canvas,context : Context){
-        try {
-            val drawable = getDrawable(context,R.drawable.tile_grass)
-            drawable?.setBounds(posX,posY,posX+tileSize,posY+tileSize)
-            drawable?.draw(canvas)
-        }
-        catch (e : Exception){
-            e.printStackTrace()
-        }
+class Terrain(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
+   override fun draw(canvas : Canvas,drawables: Drawables){
+       val drawable = drawables.tileGrass
+       drawable?.setBounds(posX,posY,posX+tileSize,posY+tileSize)
+       drawable?.draw(canvas)
+   }
+}
+
+class RoadHorizontal(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
+    override fun draw(canvas : Canvas,drawables: Drawables){
+        val drawable = drawables.tileRoadHorizontal
+        drawable?.setBounds(posX,posY,posX+tileSize,posY+tileSize)
+        drawable?.draw(canvas)
+    }
+}
+
+class RoadVertical(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
+    override fun draw(canvas : Canvas,drawables: Drawables){
+        val drawable = drawables.tileRoadVertical
+        drawable?.setBounds(posX,posY,posX+tileSize,posY+tileSize)
+        drawable?.draw(canvas)
+    }
+}
+class RoadCrossing4(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
+    override fun draw(canvas : Canvas,drawables: Drawables){
+        val drawable = drawables.tileRoadCrossing4
+        drawable?.setBounds(posX,posY,posX+tileSize,posY+tileSize)
+        drawable?.draw(canvas)
     }
 }

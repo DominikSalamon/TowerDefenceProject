@@ -11,6 +11,8 @@ import androidx.core.content.ContextCompat
 class Game(context: Context) : SurfaceView(context),
     SurfaceHolder.Callback {
     private val gameLoop: GameLoop
+    private lateinit var board : Board
+    private var isBoard : Boolean = false
     override fun surfaceCreated(holder: SurfaceHolder) {
         gameLoop.startLoop()
     }
@@ -21,13 +23,19 @@ class Game(context: Context) : SurfaceView(context),
         width: Int,
         height: Int
     ) {
+
     }
 
     override fun surfaceDestroyed(holder: SurfaceHolder) {}
     override fun draw(canvas: Canvas) {
         super.draw(canvas)
 
-        Board(width,height).draw(canvas,context)
+        if(!isBoard) {
+            board = Board(width,height,context)
+            isBoard=true
+        }
+
+        board.draw(canvas)
 
         drawUPS(canvas)
         drawFPS(canvas)
@@ -36,7 +44,8 @@ class Game(context: Context) : SurfaceView(context),
     private fun drawUPS(canvas: Canvas) {
         val averageUPS = gameLoop.averageUPS.toInt().toString()
         val paint = Paint()
-        val color = ContextCompat.getColor(context, R.color.colorLight)
+        paint.flags = Paint.ANTI_ALIAS_FLAG
+        val color = ContextCompat.getColor(context, R.color.colorDark)
         paint.color = color
         paint.textSize = 40f
         canvas.drawText("UPS: $averageUPS", 20f, 50f, paint)
@@ -45,7 +54,8 @@ class Game(context: Context) : SurfaceView(context),
     private fun drawFPS(canvas: Canvas) {
         val averageFPS = gameLoop.averageFPS.toInt().toString()
         val paint = Paint()
-        val color = ContextCompat.getColor(context, R.color.colorLight)
+        paint.flags = Paint.ANTI_ALIAS_FLAG
+        val color = ContextCompat.getColor(context, R.color.colorDark)
         paint.color = color
         paint.textSize = 40f
         canvas.drawText("FPS: $averageFPS", 20f, 110f, paint)
