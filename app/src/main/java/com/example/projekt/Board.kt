@@ -47,7 +47,7 @@ class Board(private var width : Int, private var height : Int, context: Context,
         if(randomGeneneration){
             for(i in 0 until xTiles){
                 for(j in 0 until yTiles){
-                    if(j==yTiles-1||){
+                    if(j==yTiles-1){
                         tiles.add(Terrain(i*tileWidth+marginLeft,j*tileHeight+marginTop,tileWidth))
                     }
                     else{
