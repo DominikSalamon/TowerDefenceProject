@@ -11,7 +11,7 @@
 9-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:5:5-23:19
+11-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:5:5-26:19
 12        android:allowBackup="true"
 12-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -29,29 +29,35 @@
 20        android:theme="@style/AppTheme" >
 20-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:11:9-40
 21        <activity
-21-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:12:9-14:20
-22            android:name="com.example.projekt.GameActivity"
+21-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:12:9-19:20
+22            android:name="com.example.projekt.MainActivity"
 22-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:12:19-47
 23            android:screenOrientation="landscape" >
-23-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:13:13-50
-24        </activity>
-25        <activity
-25-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:15:9-22:20
-26            android:name="com.example.projekt.MainActivity"
-26-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:15:19-47
-27            android:screenOrientation="landscape" >
-27-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:16:17-54
-28            <intent-filter>
-28-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:17:13-21:29
-29                <action android:name="android.intent.action.MAIN" />
-29-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:18:17-69
-29-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:18:25-66
-30
-31                <category android:name="android.intent.category.LAUNCHER" />
-31-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:20:17-77
-31-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:20:27-74
-32            </intent-filter>
-33        </activity>
-34    </application>
-35
-36</manifest>
+23-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:13:17-54
+24            <intent-filter>
+24-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:14:13-18:29
+25                <action android:name="android.intent.action.MAIN" />
+25-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:15:17-69
+25-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:15:25-66
+26
+27                <category android:name="android.intent.category.LAUNCHER" />
+27-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:17:17-77
+27-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:17:27-74
+28            </intent-filter>
+29        </activity>
+30        <activity
+30-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:20:9-25:20
+31            android:name="com.example.projekt.GameActivity"
+31-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:20:19-47
+32            android:screenOrientation="landscape" >
+32-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:21:13-50
+33            <meta-data
+33-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:22:13-24:68
+34                android:name="android.support.PARENT_ACTIVITY"
+34-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:23:17-63
+35                android:value="com.example.projekt.MainActivity" />
+35-->C:\Users\Adminek\Desktop\Projekt\app\src\main\AndroidManifest.xml:24:17-65
+36        </activity>
+37    </application>
+38
+39</manifest>

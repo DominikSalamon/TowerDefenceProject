@@ -31,7 +31,8 @@ class GameLoop(private val game: Game, private val surfaceHolder: SurfaceHolder)
                 synchronized(surfaceHolder) {
                     game.update()
                     updateCount++
-                    game.draw(canvas)
+                    if(canvas!=null)
+                        game.draw(canvas)
                 }
             } catch (e: IllegalArgumentException) {
                 e.printStackTrace()

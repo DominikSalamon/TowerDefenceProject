@@ -19,10 +19,6 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.projekt.GameActivity"
-            android:screenOrientation="landscape" >
-        </activity>
-        <activity
             android:name="com.example.projekt.MainActivity"
             android:screenOrientation="landscape" >
             <intent-filter>
@@ -30,6 +26,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.projekt.GameActivity"
+            android:screenOrientation="landscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.projekt.MainActivity" />
         </activity>
     </application>
 

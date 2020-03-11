@@ -1,20 +1,27 @@
 package com.example.projekt
 
+
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
+import android.os.Bundle
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import androidx.core.content.ContextCompat
 
 
-class Game(context: Context) : SurfaceView(context),
+@SuppressLint("ViewConstructor")
+class Game(context: Context, private var extras: Bundle) : SurfaceView(context),
     SurfaceHolder.Callback {
     private val gameLoop: GameLoop
     private lateinit var board : Board
     private var isBoard : Boolean = false
+
+
     override fun surfaceCreated(holder: SurfaceHolder) {
         gameLoop.startLoop()
+
     }
 
     override fun surfaceChanged(
@@ -31,7 +38,7 @@ class Game(context: Context) : SurfaceView(context),
         super.draw(canvas)
 
         if(!isBoard) {
-            board = Board(width,height,context)
+            board = Board(width, height, context, extras)
             isBoard=true
         }
 

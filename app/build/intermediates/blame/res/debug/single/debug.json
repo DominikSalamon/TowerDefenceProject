@@ -40,12 +40,12 @@
         "source": "C:\\Users\\Adminek\\Desktop\\Projekt\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Adminek\\Desktop\\Projekt\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_right.xml.flat",
-        "source": "C:\\Users\\Adminek\\Desktop\\Projekt\\app\\src\\main\\res\\anim\\slide_in_right.xml"
-    },
-    {
         "merged": "C:\\Users\\Adminek\\Desktop\\Projekt\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Adminek\\Desktop\\Projekt\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Adminek\\Desktop\\Projekt\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_right.xml.flat",
+        "source": "C:\\Users\\Adminek\\Desktop\\Projekt\\app\\src\\main\\res\\anim\\slide_in_right.xml"
     },
     {
         "merged": "C:\\Users\\Adminek\\Desktop\\Projekt\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_tile_road_horizontal.png.flat",
