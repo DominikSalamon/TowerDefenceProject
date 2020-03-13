@@ -1,4 +1,4 @@
-#Thu Mar 12 11:00:48 CET 2020
-base.0=C\:\\Users\\Adminek\\Desktop\\Projekt\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
+#Fri Mar 13 13:46:30 CET 2020
+base.0=C\:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

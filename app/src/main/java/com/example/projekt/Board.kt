@@ -10,13 +10,90 @@ import androidx.appcompat.content.res.AppCompatResources
 
 class Drawables(context: Context){
     val tileRoadHorizontal = AppCompatResources.getDrawable(context, R.drawable.tile_road_horizontal)
-    val tileRoadVertical= AppCompatResources.getDrawable(context, R.drawable.tile_road_vertical)
-    val tileRoadCrossing4= AppCompatResources.getDrawable(context, R.drawable.tile_road_crossing4)
+    val tileRoadVertical = AppCompatResources.getDrawable(context, R.drawable.tile_road_vertical)
+    val tileRoadCrossing4 = AppCompatResources.getDrawable(context, R.drawable.tile_road_crossing4)
+    val tileRoadLeftBottom = AppCompatResources.getDrawable(context, R.drawable.tile_road_left_bottom)
+    val tileRoadLeftTop= AppCompatResources.getDrawable(context, R.drawable.tile_road_left_top)
+    val tileRoadRightBottom = AppCompatResources.getDrawable(context, R.drawable.tile_road_right_bottom)
+    val tileRoadRightTop = AppCompatResources.getDrawable(context, R.drawable.tile_road_right_top)
     val tileGrass = AppCompatResources.getDrawable(context, R.drawable.tile_grass)
 }
 
 class Coords(val x:Int, val y:Int, val tile:String)
+/*
+class Path(private var limitX: Int,private var limitY: Int, private var code: String = "" ){
+    class Node(val x:Int, val y:Int, val tile:String)
+    private var nodes = mutableListOf<Node>()
 
+    init{
+        if(code=="")
+            createRandom()
+        else
+            create()
+    }
+
+    fun create(){
+
+    }
+
+    fun createRandom(){
+        nodes.add(Node((0 until limitX).random(),0, "tileGrass"))
+
+        for(y in 0 until limitY){
+            for(x in 0 until limitX){
+
+            }
+        }
+    }
+
+    private fun getAvaibleTiles(x:Int, y:Int){
+        var avaible = arrayListOf<Path.Node>()
+
+        nodes.forEach {
+            if(x+1==it.x&&y==it.y){
+                if(it.tile=="roadHorizontal"||it.tile=="roadLeftTop"||it.tile=="roadLeftBottom"||it.tile=="roadCrossing"){
+
+
+
+                }
+            }
+
+            if(x-1==it.x&&y==it.y){
+                if(it.tile=="roadHorizontal"||it.tile=="roadRightTop"||it.tile=="roadRightBottom"||it.tile=="roadCrossing"){
+
+
+
+                }
+            }
+
+            if(x==it.x&&y+1==it.y){
+                if(it.tile=="roadVertical"||it.tile=="roadLeftBottom"||it.tile=="roadRightBottom"||it.tile=="roadCrossing"){
+
+
+
+                }
+            }
+
+            if(x==it.x&&y-1==it.y){
+                if(it.tile=="roadVertical"||it.tile=="roadLeftTop"||it.tile=="roadRightTop"||it.tile=="roadCrossing"){
+
+
+
+                }
+            }
+        }
+
+        return avaible
+    }
+
+    fun isOccupied(x:Int,y:Int): Boolean {
+        nodes.forEach{
+            if(it.x==x&&it.y==y) return true
+        }
+        return false
+    }
+}
+*/
 class Board(private var width : Int, private var height : Int, context: Context, extras: Bundle) {
     private var randomGeneneration = extras.getBoolean("randomMap")
     private var xTiles= extras.getInt("xTiles")
@@ -28,10 +105,6 @@ class Board(private var width : Int, private var height : Int, context: Context,
     init{
         if(randomGeneneration){
 
-            val roadTiles = arrayListOf<Coords>()
-
-            roadTiles.add(Coords((0 until xTiles).random(),0,"roadVertical"))
-
             /*
 
                 0 - tileGrass
@@ -41,11 +114,25 @@ class Board(private var width : Int, private var height : Int, context: Context,
 
             */
 
+            val roadTiles = arrayListOf<Coords>()
+            val nextTiles = arrayListOf<Coords>()
+
+            val startX = (0 until xTiles).random()
+
+            roadTiles.add(Coords(startX,0,"roadVertical"))
+            nextTiles.add(Coords(startX,1,"unset"))
+
+
+
+            var last: Coords
+            var prevLast: Coords
             while(true){
-                val last = roadTiles.last()
+                last = roadTiles.last()
 
                 if(last.x==xTiles-1||last.y==yTiles-1)
                     break
+
+
 
                 var avaible = arrayOf<Int>()
                 when(last.tile){
@@ -72,7 +159,7 @@ class Board(private var width : Int, private var height : Int, context: Context,
                     }
                 }
 
-
+                prevLast = last
 
             }
 
