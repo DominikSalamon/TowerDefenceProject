@@ -15,6 +15,8 @@ class Drawables(context: Context){
     val tileGrass = AppCompatResources.getDrawable(context, R.drawable.tile_grass)
 }
 
+class Coords(val x:Int, val y:Int, val tile:String)
+
 class Board(private var width : Int, private var height : Int, context: Context, extras: Bundle) {
     private var randomGeneneration = extras.getBoolean("randomMap")
     private var xTiles= extras.getInt("xTiles")
@@ -25,21 +27,69 @@ class Board(private var width : Int, private var height : Int, context: Context,
 
     init{
         if(randomGeneneration){
-            for(i in 0 until xTiles){
-                for(j in 0 until yTiles){
-                    if(j==yTiles-1){
-                        tiles.add(Terrain(i*tileSize,j*tileSize,tileSize))
+
+            val roadTiles = arrayListOf<Coords>()
+
+            roadTiles.add(Coords((0 until xTiles).random(),0,"roadVertical"))
+
+            /*
+
+                0 - tileGrass
+                1 - roadVertical
+                2 - roadHorizontal
+                3 - roadCrossing
+
+            */
+
+            while(true){
+                val last = roadTiles.last()
+
+                if(last.x==xTiles-1||last.y==yTiles-1)
+                    break
+
+                var avaible = arrayOf<Int>()
+                when(last.tile){
+                    "roadVertical" -> {
+                        avaible = arrayOf(1,3)
                     }
-                    else{
-                        when((0..3).random()){
-                            0 -> tiles.add(Terrain(i*tileSize,j*tileSize,tileSize))
-                            1 -> tiles.add(RoadCrossing4(i*tileSize,j*tileSize,tileSize))
-                            2 -> tiles.add(RoadHorizontal(i*tileSize,j*tileSize,tileSize))
-                            3 -> tiles.add(RoadVertical(i*tileSize,j*tileSize,tileSize))
-                        }
+                    "roadHorizontal" -> {
+                        avaible = arrayOf(2,3)
+                    }
+                    "roadCrossing" -> {
+                        avaible = arrayOf(1,2,3)
+                    }
+                }
+
+                when(avaible.random()){
+                    1 -> {
+                        roadTiles.add(Coords(last.x,last.y+1,"roadVertical"))
+                    }
+                    2 -> {
+                        roadTiles.add(Coords(last.x+1,last.y,"roadHorizontal"))
+                    }
+                    3 -> {
+                        roadTiles.add(Coords(last.x+1,last.x+1,"roadCrossing"))
+                    }
+                }
+
+
+
+            }
+
+            roadTiles.forEach {
+                when(it.tile){
+                    "roadVertical" -> {
+                        tiles.add(RoadVertical(it.x,it.y,tileSize))
+                    }
+                    "roadHorizontal" -> {
+                        tiles.add(RoadHorizontal(it.x,it.y,tileSize))
+                    }
+                    "roadCrossing" -> {
+                        tiles.add(RoadCrossing4(it.x,it.y,tileSize))
                     }
                 }
             }
+
         }
     }
 
@@ -54,7 +104,7 @@ class Board(private var width : Int, private var height : Int, context: Context,
             height.toFloat(),
             paint)
 
-
+        Terrain(0,0,width).draw(canvas,drawables)
         tiles.forEach{
             it.draw(canvas,drawables)
         }

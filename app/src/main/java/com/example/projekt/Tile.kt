@@ -9,7 +9,7 @@ abstract class Tile(protected var posX: Int, protected var posY: Int,protected v
 class Terrain(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
    override fun draw(canvas : Canvas,drawables: Drawables){
        val drawable = drawables.tileGrass
-       drawable?.setBounds(posX,posY,posX+tileSize,posY+tileSize)
+       drawable?.setBounds(posX*tileSize,posY*tileSize,(posX+1)*tileSize,(posY+1)*tileSize)
        drawable?.draw(canvas)
    }
 }
@@ -17,7 +17,7 @@ class Terrain(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) 
 class RoadHorizontal(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
     override fun draw(canvas : Canvas,drawables: Drawables){
         val drawable = drawables.tileRoadHorizontal
-        drawable?.setBounds(posX,posY,posX+tileSize,posY+tileSize)
+        drawable?.setBounds(posX*tileSize,posY*tileSize,(posX+1)*tileSize,(posY+1)*tileSize)
         drawable?.draw(canvas)
     }
 }
@@ -25,14 +25,14 @@ class RoadHorizontal(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, til
 class RoadVertical(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
     override fun draw(canvas : Canvas,drawables: Drawables){
         val drawable = drawables.tileRoadVertical
-        drawable?.setBounds(posX,posY,posX+tileSize,posY+tileSize)
+        drawable?.setBounds(posX*tileSize,posY*tileSize,(posX+1)*tileSize,(posY+1)*tileSize)
         drawable?.draw(canvas)
     }
 }
 class RoadCrossing4(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
     override fun draw(canvas : Canvas,drawables: Drawables){
         val drawable = drawables.tileRoadCrossing4
-        drawable?.setBounds(posX,posY,posX+tileSize,posY+tileSize)
+        drawable?.setBounds(posX*tileSize,posY*tileSize,(posX+1)*tileSize,(posY+1)*tileSize)
         drawable?.draw(canvas)
     }
 }
