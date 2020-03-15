@@ -1,8 +1,6 @@
 package com.example.projekt
 import android.content.Context
 import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
 import android.os.Bundle
 import androidx.appcompat.content.res.AppCompatResources
 
@@ -19,179 +17,150 @@ class Drawables(context: Context){
     val tileGrass = AppCompatResources.getDrawable(context, R.drawable.tile_grass)
 }
 
-class Coords(val x:Int, val y:Int, val tile:String)
-/*
-class Path(private var limitX: Int,private var limitY: Int, private var code: String = "" ){
-    class Node(val x:Int, val y:Int, val tile:String)
-    private var nodes = mutableListOf<Node>()
+class Path(private var limitX: Int,private var limitY: Int, private var tileSize: Int){
+    private var tiles = arrayListOf<Tile>()
 
-    init{
-        if(code=="")
-            createRandom()
-        else
-            create()
+    private fun isOccupied(x:Int,y:Int): Boolean{
+        var boolean = false
+        tiles.forEach {
+            if(it.posX==x&&it.posY==y){
+                boolean = true
+                return@forEach
+            }
+        }
+        return boolean
     }
 
-    fun create(){
 
-    }
 
-    fun createRandom(){
-        nodes.add(Node((0 until limitX).random(),0, "tileGrass"))
+    private fun getAvaibleFromJoint(joint: String,x:Int,y:Int){
+        val roadHorizontal = RoadHorizontal(x,y,tileSize)
+        val roadVertical = RoadVertical(x,y,tileSize)
+        val roadRightBottom = RoadRightBottom(x,y,tileSize)
+        val roadRightTop = RoadRightTop(x,y,tileSize)
+        val roadLeftTop = RoadLeftTop(x,y,tileSize)
+        val roadLeftBottom = RoadLeftBottom(x,y,tileSize)
+        val roadCrossing4 = RoadCrossing4(x,y,tileSize)
 
-        for(y in 0 until limitY){
-            for(x in 0 until limitX){
+        var avaible = arrayListOf<Tile>()
+        when (joint) {
+            "top" -> {
+                avaible = arrayListOf(roadVertical,roadLeftBottom,roadRightBottom,roadCrossing4)
+
+            }
+            "bottom" -> {
+                avaible = arrayListOf(roadVertical,roadLeftTop,roadRightTop,roadCrossing4)
+
+            }
+            "left" -> {
+                avaible = arrayListOf(roadHorizontal,roadRightBottom,roadRightTop,roadCrossing4)
+
+            }
+            "right" -> {
+                avaible = arrayListOf(roadHorizontal,roadLeftBottom,roadLeftTop,roadCrossing4)
 
             }
         }
     }
 
-    private fun getAvaibleTiles(x:Int, y:Int){
-        var avaible = arrayListOf<Path.Node>()
 
-        nodes.forEach {
-            if(x+1==it.x&&y==it.y){
-                if(it.tile=="roadHorizontal"||it.tile=="roadLeftTop"||it.tile=="roadLeftBottom"||it.tile=="roadCrossing"){
+    fun createRandom(): ArrayList<Tile>{
+        val tile = RoadVertical((0 until limitX).random(),0,tileSize)
+        tile.jointTop="occupied"
+        tiles.add(tile)
 
+       while(true){
+            var occupied=0
+            for(i in 0 until tiles.size){
+
+                val it = tiles[i]
+                if(it.isFreeJoint()&&(!it.isHittingBorder(limitX,limitY))){
+                    val x = it.getFreeJointX()
+                    val y = it.getFreeJointY()
+
+                    if(!isOccupied(x,y)){
+
+                        val roadHorizontal = RoadHorizontal(x,y,tileSize)
+                        val roadVertical = RoadVertical(x,y,tileSize)
+                        val roadRightBottom = RoadRightBottom(x,y,tileSize)
+                        val roadRightTop = RoadRightTop(x,y,tileSize)
+                        val roadLeftTop = RoadLeftTop(x,y,tileSize)
+                        val roadLeftBottom = RoadLeftBottom(x,y,tileSize)
+                        val roadCrossing4 = RoadCrossing4(x,y,tileSize)
+                        val tile2 : Tile
+
+                        when {
+                            it.freeJoint()=="top" -> {
+                                tile2 = arrayListOf(roadVertical,roadLeftBottom,roadRightBottom,roadCrossing4).random()
+                                tile2.jointBottom="occupied"
+                                it.jointTop="occupied"
+                                tiles.add(tile2)
+                            }
+                            it.freeJoint()=="bottom" -> {
+                                tile2 = arrayListOf(roadVertical,roadLeftTop,roadRightTop,roadCrossing4).random()
+                                tile2.jointTop="occupied"
+                                it.jointBottom="occupied"
+                                tiles.add(tile2)
+                            }
+                            it.freeJoint()=="left" -> {
+                                tile2 = arrayListOf(roadHorizontal,roadRightBottom,roadRightTop,roadCrossing4).random()
+                                tile2.jointRight="occupied"
+                                it.jointLeft="occupied"
+                                tiles.add(tile2)
+                            }
+                            it.freeJoint()=="right" -> {
+                                tile2 = arrayListOf(roadHorizontal,roadLeftBottom,roadLeftTop,roadCrossing4).random()
+                                tile2.jointLeft="occupied"
+                                it.jointRight="occupied"
+                                tiles.add(tile2)
+                            }
+                        }
+
+
+
+                    }
+                    else{
+                        occupied++
+                    }
 
 
                 }
+
+
             }
+           var j = 0
+           tiles.forEach {
+               if(it.isFreeJoint()) {
+                   j++
+                   return@forEach
+               }
+           }
+           if(j<=0) break
+           if(occupied==j) break
+       }
 
-            if(x-1==it.x&&y==it.y){
-                if(it.tile=="roadHorizontal"||it.tile=="roadRightTop"||it.tile=="roadRightBottom"||it.tile=="roadCrossing"){
-
-
-
-                }
-            }
-
-            if(x==it.x&&y+1==it.y){
-                if(it.tile=="roadVertical"||it.tile=="roadLeftBottom"||it.tile=="roadRightBottom"||it.tile=="roadCrossing"){
-
-
-
-                }
-            }
-
-            if(x==it.x&&y-1==it.y){
-                if(it.tile=="roadVertical"||it.tile=="roadLeftTop"||it.tile=="roadRightTop"||it.tile=="roadCrossing"){
-
-
-
-                }
-            }
-        }
-
-        return avaible
+        return tiles
     }
 
-    fun isOccupied(x:Int,y:Int): Boolean {
-        nodes.forEach{
-            if(it.x==x&&it.y==y) return true
-        }
-        return false
-    }
 }
-*/
+
 class Board(private var width : Int, private var height : Int, context: Context, extras: Bundle) {
-    private var randomGeneneration = extras.getBoolean("randomMap")
     private var xTiles= extras.getInt("xTiles")
     private var yTiles = extras.getInt("yTiles")
     private var tileSize = 100
-    private var tiles = mutableListOf<Tile>()
+    private var tiles = arrayListOf<Tile>()
     private var drawables = Drawables(context)
 
     init{
-        if(randomGeneneration){
-
-            /*
-
-                0 - tileGrass
-                1 - roadVertical
-                2 - roadHorizontal
-                3 - roadCrossing
-
-            */
-
-            val roadTiles = arrayListOf<Coords>()
-            val nextTiles = arrayListOf<Coords>()
-
-            val startX = (0 until xTiles).random()
-
-            roadTiles.add(Coords(startX,0,"roadVertical"))
-            nextTiles.add(Coords(startX,1,"unset"))
-
-
-
-            var last: Coords
-            var prevLast: Coords
-            while(true){
-                last = roadTiles.last()
-
-                if(last.x==xTiles-1||last.y==yTiles-1)
-                    break
-
-
-
-                var avaible = arrayOf<Int>()
-                when(last.tile){
-                    "roadVertical" -> {
-                        avaible = arrayOf(1,3)
-                    }
-                    "roadHorizontal" -> {
-                        avaible = arrayOf(2,3)
-                    }
-                    "roadCrossing" -> {
-                        avaible = arrayOf(1,2,3)
-                    }
-                }
-
-                when(avaible.random()){
-                    1 -> {
-                        roadTiles.add(Coords(last.x,last.y+1,"roadVertical"))
-                    }
-                    2 -> {
-                        roadTiles.add(Coords(last.x+1,last.y,"roadHorizontal"))
-                    }
-                    3 -> {
-                        roadTiles.add(Coords(last.x+1,last.x+1,"roadCrossing"))
-                    }
-                }
-
-                prevLast = last
-
-            }
-
-            roadTiles.forEach {
-                when(it.tile){
-                    "roadVertical" -> {
-                        tiles.add(RoadVertical(it.x,it.y,tileSize))
-                    }
-                    "roadHorizontal" -> {
-                        tiles.add(RoadHorizontal(it.x,it.y,tileSize))
-                    }
-                    "roadCrossing" -> {
-                        tiles.add(RoadCrossing4(it.x,it.y,tileSize))
-                    }
-                }
-            }
-
-        }
+        tiles = Path(xTiles,yTiles,tileSize).createRandom()
     }
 
     fun draw(canvas : Canvas){
-        val paint = Paint()
-        paint.color = Color.rgb(240, 240, 240)
 
-        canvas.drawRect(
-            0f,
-            0f,
-            width.toFloat(),
-            height.toFloat(),
-            paint)
+        Terrain(0,0,xTiles*tileSize).draw(canvas,drawables)
 
-        Terrain(0,0,width).draw(canvas,drawables)
+
+
         tiles.forEach{
             it.draw(canvas,drawables)
         }
