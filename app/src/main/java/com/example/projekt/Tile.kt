@@ -4,10 +4,10 @@ import android.graphics.drawable.Drawable
 
 
 abstract class Tile(var posX: Int, var posY: Int, private var tileSize: Int){
-    var jointLeft = "none"
-    var jointRight = "none"
-    var jointTop = "none"
-    var jointBottom = "none"
+    var jointLeft = "occupied"
+    var jointRight = "occupied"
+    var jointTop = "occupied"
+    var jointBottom = "occupied"
     abstract fun draw(canvas : Canvas,drawables: Drawables)
     fun draw(canvas : Canvas,drawable: Drawable?){
         drawable?.setBounds(posX*tileSize,posY*tileSize,(posX+1)*tileSize,(posY+1)*tileSize)
@@ -16,7 +16,14 @@ abstract class Tile(var posX: Int, var posY: Int, private var tileSize: Int){
     fun isFreeJoint(): Boolean {
         return (jointLeft=="free")||(jointRight=="free")||(jointTop=="free")||(jointBottom=="free")
     }
-
+    fun freeJoints(): ArrayList<String>{
+        val array = arrayListOf<String>()
+        if(jointTop=="free")    array.add("top")
+        if(jointBottom=="free") array.add("bottom")
+        if(jointLeft=="free")   array.add("left")
+        if(jointRight=="free")  array.add("right")
+        return array
+    }
     fun isHittingBorder(limitX: Int, limitY:Int): Boolean{
         var boolean = false
 
@@ -44,28 +51,21 @@ abstract class Tile(var posX: Int, var posY: Int, private var tileSize: Int){
 
     }
 
-    fun freeJoint(): String {
-        if(jointTop=="free")  return "top"
-        if(jointBottom=="free")  return "bottom"
-        if(jointLeft=="free")  return "left"
-        if(jointRight=="free")  return "right"
-        return "none"
-    }
-    fun getFreeJointX(): Int{
-        return when {
-            jointLeft=="free" -> posX-1
-            jointRight=="free" -> posX+1
-            jointTop=="free" -> posX
-            jointBottom=="free" -> posX
+    fun getFreeJointX(joint: String): Int{
+        return when(joint){
+            "left" -> posX-1
+            "right" -> posX+1
+            "top" -> posX
+            "bottom" -> posX
             else -> 0
         }
     }
-    fun getFreeJointY(): Int{
-        return when {
-            jointLeft=="free" -> posY
-            jointRight=="free" -> posY
-            jointTop=="free" -> posY-1
-            jointBottom=="free" -> posY+1
+    fun getFreeJointY(joint: String): Int{
+        return when(joint){
+            "left" -> posY
+            "right" -> posY
+            "top" -> posY-1
+            "bottom" -> posY+1
             else -> 0
         }
     }
