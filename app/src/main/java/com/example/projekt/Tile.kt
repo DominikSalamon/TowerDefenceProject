@@ -13,6 +13,10 @@ abstract class Tile(var posX: Int, var posY: Int, private var tileSize: Int){
         drawable?.setBounds(posX*tileSize,posY*tileSize,(posX+1)*tileSize,(posY+1)*tileSize)
         drawable?.draw(canvas)
     }
+    fun drawRect(canvas : Canvas,drawable: Drawable?,tileWidth:Int){
+        drawable?.setBounds(posX*tileSize,posY*tileSize,(posX+1)*tileWidth,(posY+1)*tileSize)
+        drawable?.draw(canvas)
+    }
     fun isFreeJoint(): Boolean {
         return (jointLeft=="free")||(jointRight=="free")||(jointTop=="free")||(jointBottom=="free")
     }
@@ -76,6 +80,10 @@ class Terrain(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) 
        val drawable = drawables.tileGrass
        super.draw(canvas,drawable)
    }
+     fun drawRect(canvas : Canvas,drawables: Drawables,width: Int){
+        val drawable = drawables.tileGrass
+        super.drawRect(canvas,drawable,width)
+    }
 }
 
 class RoadHorizontal(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
