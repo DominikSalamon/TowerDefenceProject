@@ -4,6 +4,7 @@ import android.app.Activity
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.util.DisplayMetrics
 import android.view.View
 import androidx.annotation.RequiresApi
 
@@ -21,7 +22,14 @@ class GameActivity : Activity() {
             }
         }
         val extras = intent.extras!!
-        setContentView(Game(this, extras))
+
+        val metrics = DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(metrics)
+
+
+
+
+        setContentView(Game(metrics.widthPixels,metrics.heightPixels,this, extras))
     }
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)

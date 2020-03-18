@@ -6,22 +6,42 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import androidx.core.content.ContextCompat
 
 
 @SuppressLint("ViewConstructor")
-class Game(context: Context, private var extras: Bundle) : SurfaceView(context),
+class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) : SurfaceView(context),
     SurfaceHolder.Callback {
     private val gameLoop: GameLoop
-    private lateinit var board : Board
-    private var isBoard : Boolean = false
+    private var board : Board
+    private val camera : Camera
 
+
+
+
+
+    @SuppressLint("ClickableViewAccessibility")
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+
+        when(event.action){
+            MotionEvent.ACTION_DOWN -> {
+                camera.startPoint(event.x.toInt(),event.y.toInt())
+                return true
+            }
+            MotionEvent.ACTION_MOVE -> {
+                camera.move(event.x.toInt(),event.y.toInt())
+                return true
+            }
+        }
+
+        return super.onTouchEvent(event)
+    }
 
     override fun surfaceCreated(holder: SurfaceHolder) {
         gameLoop.startLoop()
-
     }
 
     override fun surfaceChanged(
@@ -37,12 +57,7 @@ class Game(context: Context, private var extras: Bundle) : SurfaceView(context),
     override fun draw(canvas: Canvas) {
         super.draw(canvas)
 
-        if(!isBoard) {
-            board = Board(width, height, context, extras)
-            isBoard=true
-        }
-
-        board.draw(canvas)
+        board.draw(canvas,camera)
 
         drawUPS(canvas)
         drawFPS(canvas)
@@ -77,5 +92,8 @@ class Game(context: Context, private var extras: Bundle) : SurfaceView(context),
         surfaceHolder.addCallback(this)
         gameLoop = GameLoop(this, surfaceHolder)
         isFocusable = true
+
+        board = Board(context, extras)
+        camera = Camera(board.getXWidth()- screenWidth,board.getYHeight()- screenHeight)
     }
 }
