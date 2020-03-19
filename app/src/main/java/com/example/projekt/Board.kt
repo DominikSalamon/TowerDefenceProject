@@ -15,11 +15,11 @@ class Board(context: Context, extras: Bundle) {
         tiles = Path(xTiles,yTiles,tileSize).createRandom()
     }
 
-    fun getXWidth(): Int{
+    fun getWidth(): Int{
         return xTiles*tileSize
     }
 
-    fun getYHeight(): Int{
+    fun getHeight(): Int{
         return yTiles*tileSize
     }
 

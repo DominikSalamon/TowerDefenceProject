@@ -7,6 +7,7 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import android.os.Bundle
 import android.view.MotionEvent
+import android.view.ScaleGestureDetector
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import androidx.core.content.ContextCompat
@@ -21,24 +22,6 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
 
 
 
-
-
-    @SuppressLint("ClickableViewAccessibility")
-    override fun onTouchEvent(event: MotionEvent): Boolean {
-
-        when(event.action){
-            MotionEvent.ACTION_DOWN -> {
-               camera.startPoint(event.x.toInt(),event.y.toInt())
-                return true
-            }
-            MotionEvent.ACTION_MOVE -> {
-                camera.move(event.x.toInt(),event.y.toInt())
-                return true
-            }
-        }
-
-        return super.onTouchEvent(event)
-    }
 
     override fun surfaceCreated(holder: SurfaceHolder) {
         gameLoop.startLoop()
@@ -61,6 +44,7 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
         canvas.save()
 
         canvas.translate(camera.getX().toFloat(),camera.getY().toFloat())
+        canvas.scale(camera.scale,camera.scale)
 
         board.draw(canvas)
 
@@ -101,6 +85,41 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
         isFocusable = true
 
         board = Board(context, extras)
-        camera = Camera(board.getXWidth()- screenWidth,board.getYHeight()- screenHeight)
+        camera = Camera(screenWidth, screenHeight,board.getWidth(),board.getHeight())
+    }
+
+    private val scaleListener = object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
+
+        override fun onScale(detector: ScaleGestureDetector): Boolean {
+            camera.scale *= detector.scaleFactor
+
+            // Don't let the object get too small or too large.
+            camera.scale = 0.1f.coerceAtLeast(camera.scale.coerceAtMost(3.0f))
+
+            invalidate()
+            return true
+        }
+    }
+
+    private val mScaleDetector = ScaleGestureDetector(context, scaleListener)
+
+    @SuppressLint("ClickableViewAccessibility")
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+
+        mScaleDetector.onTouchEvent(event)
+
+        when(event.action){
+            MotionEvent.ACTION_DOWN -> {
+                camera.startPoint(event.x.toInt(),event.y.toInt())
+                return true
+            }
+            MotionEvent.ACTION_MOVE -> {
+                camera.move(event.x.toInt(),event.y.toInt())
+                return true
+            }
+        }
+
+
+        return super.onTouchEvent(event)
     }
 }

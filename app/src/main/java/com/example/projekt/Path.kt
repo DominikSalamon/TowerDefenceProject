@@ -6,11 +6,11 @@ class Path(private var limitX: Int,private var limitY: Int, private var tileSize
 
     private var roadVerticalLimit = 999
     private var roadHorizontalLimit = 999
-    private var roadCrossing4Limit = 3
-    private var roadRightTopLimit = 3
-    private var roadRightBottomLimit = 3
-    private var roadLeftBottomLimit = 3
-    private var roadLeftTopLimit = 3
+    private var roadCrossing4Limit = 2
+    private var roadRightTopLimit = 5
+    private var roadRightBottomLimit = 5
+    private var roadLeftBottomLimit = 5
+    private var roadLeftTopLimit = 5
 
     private var roadVerticalProbability = 5
     private var roadHorizontalProbability = 5
