@@ -9,9 +9,9 @@ class Camera(private var difX: Int, private var difY: Int){
     private var startY = 0
     private var limit = 200
 
-    fun startPoint(x: Int, y: Int){
-        startX=x-prevX
-        startY=y-prevY
+    fun startPoint(x: Int, y: Int) {
+        startX = x - prevX
+        startY = y - prevY
     }
 
     fun move(x: Int, y: Int){
@@ -22,7 +22,7 @@ class Camera(private var difX: Int, private var difY: Int){
 
         if(difX>0){
             if(this.x>limit) this.x = limit
-            else if(this.x<-difX-limit+100) this.x = -difX-limit+100
+            else if(this.x<-difX-limit+100) this.x = -difX-limit
         }
         else{
             if(this.x<0) this.x = 0

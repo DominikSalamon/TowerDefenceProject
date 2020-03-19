@@ -28,7 +28,7 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
 
         when(event.action){
             MotionEvent.ACTION_DOWN -> {
-                camera.startPoint(event.x.toInt(),event.y.toInt())
+               camera.startPoint(event.x.toInt(),event.y.toInt())
                 return true
             }
             MotionEvent.ACTION_MOVE -> {
@@ -57,7 +57,14 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
     override fun draw(canvas: Canvas) {
         super.draw(canvas)
 
-        board.draw(canvas,camera)
+
+        canvas.save()
+
+        canvas.translate(camera.getX().toFloat(),camera.getY().toFloat())
+
+        board.draw(canvas)
+
+        canvas.restore()
 
         drawUPS(canvas)
         drawFPS(canvas)

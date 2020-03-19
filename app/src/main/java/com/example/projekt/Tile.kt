@@ -8,8 +8,7 @@ abstract class Tile(var posX: Int, var posY: Int, private var tileSize: Int){
     var jointRight = "occupied"
     var jointTop = "occupied"
     var jointBottom = "occupied"
-
-    abstract fun draw(canvas : Canvas,drawables: Drawables,camera: Camera)
+    abstract fun draw(canvas : Canvas,drawables: Drawables)
     fun draw(canvas : Canvas,drawable: Drawable?){
         drawable?.setBounds(posX*tileSize,posY*tileSize,(posX+1)*tileSize,(posY+1)*tileSize)
         drawable?.draw(canvas)
@@ -85,9 +84,9 @@ abstract class Tile(var posX: Int, var posY: Int, private var tileSize: Int){
 }
 
 class Terrain(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
-    override fun draw(canvas: Canvas, drawables: Drawables, camera: Camera) {
+    override fun draw(canvas: Canvas, drawables: Drawables) {
         val drawable = drawables.tileGrass
-        super.draw(canvas,drawable,camera)
+        super.draw(canvas,drawable)
     }
 
     fun drawRect(canvas : Canvas,drawables: Drawables,width: Int){
@@ -101,9 +100,9 @@ class RoadHorizontal(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, til
         jointLeft = "free"
         jointRight = "free"
     }
-    override fun draw(canvas : Canvas,drawables: Drawables,camera: Camera){
+    override fun draw(canvas : Canvas,drawables: Drawables){
         val drawable = drawables.tileRoadHorizontal
-        super.draw(canvas,drawable,camera)
+        super.draw(canvas,drawable)
     }
 }
 
@@ -112,9 +111,9 @@ class RoadVertical(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileS
         jointTop = "free"
         jointBottom = "free"
     }
-    override fun draw(canvas : Canvas,drawables: Drawables,camera: Camera){
+    override fun draw(canvas : Canvas,drawables: Drawables){
         val drawable = drawables.tileRoadVertical
-        super.draw(canvas,drawable,camera)
+        super.draw(canvas,drawable)
     }
 }
 
@@ -125,9 +124,9 @@ class RoadCrossing4(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tile
         jointTop = "free"
         jointBottom = "free"
     }
-    override fun draw(canvas : Canvas,drawables: Drawables,camera: Camera){
+    override fun draw(canvas : Canvas,drawables: Drawables){
         val drawable = drawables.tileRoadCrossing4
-        super.draw(canvas,drawable,camera)
+        super.draw(canvas,drawable)
     }
 }
 
@@ -136,9 +135,9 @@ class RoadLeftTop(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSi
         jointLeft = "free"
         jointTop = "free"
     }
-    override fun draw(canvas : Canvas,drawables: Drawables,camera: Camera){
+    override fun draw(canvas : Canvas,drawables: Drawables){
         val drawable = drawables.tileRoadLeftTop
-        super.draw(canvas,drawable,camera)
+        super.draw(canvas,drawable)
     }
 }
 
@@ -147,9 +146,9 @@ class RoadRightTop(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileS
         jointRight = "free"
         jointTop = "free"
     }
-    override fun draw(canvas : Canvas,drawables: Drawables,camera: Camera){
+    override fun draw(canvas : Canvas,drawables: Drawables){
         val drawable = drawables.tileRoadRightTop
-        super.draw(canvas,drawable,camera)
+        super.draw(canvas,drawable)
     }
 }
 
@@ -158,9 +157,9 @@ class RoadLeftBottom(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, til
         jointLeft = "free"
         jointBottom = "free"
     }
-    override fun draw(canvas : Canvas,drawables: Drawables,camera: Camera){
+    override fun draw(canvas : Canvas,drawables: Drawables){
         val drawable = drawables.tileRoadLeftBottom
-        super.draw(canvas,drawable,camera)
+        super.draw(canvas,drawable)
     }
 }
 
@@ -169,8 +168,8 @@ class RoadRightBottom(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, ti
         jointRight = "free"
         jointBottom = "free"
     }
-    override fun draw(canvas : Canvas,drawables: Drawables,camera: Camera){
+    override fun draw(canvas : Canvas,drawables: Drawables){
         val drawable = drawables.tileRoadRightBottom
-        super.draw(canvas,drawable,camera)
+        super.draw(canvas,drawable)
     }
 }

@@ -23,19 +23,17 @@ class Board(context: Context, extras: Bundle) {
         return yTiles*tileSize
     }
 
-    fun draw(canvas : Canvas, camera: Camera){
-
-
+    fun draw(canvas : Canvas){
 
         canvas.drawRGB(200,200,200)
 
         val drawable = drawables.tileGrass
-        drawable?.setBounds(camera.getX(),camera.getY(),camera.getX()+xTiles*tileSize,camera.getY()+yTiles*tileSize)
+        drawable?.setBounds(0,0,xTiles*tileSize,yTiles*tileSize)
         drawable?.draw(canvas)
 
 
         tiles.forEach{
-            it.draw(canvas,drawables,camera)
+            it.draw(canvas,drawables)
         }
     }
 
