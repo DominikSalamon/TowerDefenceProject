@@ -6,4 +6,5 @@
     <color name="colorMenuButton">#3C3C3C</color>
     <color name="colorLight">#F0F0F0</color>
     <color name="colorDark">#3C3C3C</color>
+    <color name="path">#A05000</color>
 </resources>

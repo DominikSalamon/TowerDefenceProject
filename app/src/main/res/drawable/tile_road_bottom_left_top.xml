@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:viewportWidth="100"
     android:viewportHeight="100"
     android:width="100dp"
@@ -9,8 +10,9 @@
         android:fillColor="#ADE17F" />
     <path
         android:pathData="M5,0L5,100L5,100L95,100L95,0"
-        android:fillColor="#A05000" />
+        android:fillColor="@color/path" />
     <path
         android:pathData="M0,5L100,5L95,5L95,95L0,95"
-        android:fillColor="#A05000" />
+        android:fillColor="@color/path"
+        tools:ignore="VectorRaster" />
 </vector>
