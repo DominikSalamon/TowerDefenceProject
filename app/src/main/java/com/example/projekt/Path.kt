@@ -14,6 +14,11 @@ class Path(private var limitX: Int,private var limitY: Int, private var tileSize
     private var roadLeftBottomLimit = extras.getInt("s13")
     private var roadLeftTopLimit = extras.getInt("s15")
 
+    private var roadLeftTopRightLimit = extras.getInt("s17")
+    private var roadTopRightBottomLimit = extras.getInt("s19")
+    private var roadRightBottomLeftLimit = extras.getInt("s21")
+    private var roadBottomLeftTopLimit = extras.getInt("s23")
+
     private var roadVerticalProbability = extras.getInt("s4")
     private var roadHorizontalProbability = extras.getInt("s6")
     private var roadCrossing4Probability = extras.getInt("s8")
@@ -21,6 +26,11 @@ class Path(private var limitX: Int,private var limitY: Int, private var tileSize
     private var roadRightBottomProbability = extras.getInt("s12")
     private var roadLeftBottomProbability = extras.getInt("s14")
     private var roadLeftTopProbability = extras.getInt("s16")
+
+    private var roadLeftTopRightProbability = extras.getInt("s18")
+    private var roadTopRightBottomProbability = extras.getInt("s20")
+    private var roadRightBottomLeftProbability = extras.getInt("s22")
+    private var roadBottomLeftTopProbability = extras.getInt("s24")
 
 
     private fun getTileFromString(tile: String,x: Int,y: Int): Tile{
@@ -32,6 +42,10 @@ class Path(private var limitX: Int,private var limitY: Int, private var tileSize
             "roadLeftBottom" -> RoadLeftBottom(x,y,tileSize)
             "roadRightTop" -> RoadRightTop(x,y,tileSize)
             "roadRightBottom" -> RoadRightBottom(x,y,tileSize)
+            "roadLeftTopRight" -> RoadLeftTopRight(x,y,tileSize)
+            "roadTopRightBottom" -> RoadTopRightBottom(x,y,tileSize)
+            "roadRightBottomLeft" -> RoadRightBottomLeft(x,y,tileSize)
+            "roadBottomLeftTop" -> RoadBottomLeftTop(x,y,tileSize)
             else -> Terrain(x,y,tileSize)
         }
     }
@@ -48,6 +62,10 @@ class Path(private var limitX: Int,private var limitY: Int, private var tileSize
             "roadLeftBottom" -> roadLeftBottomProbability
             "roadRightTop" -> roadRightTopProbability
             "roadRightBottom" -> roadRightBottomProbability
+            "roadLeftTopRight" -> roadLeftTopRightProbability
+            "roadTopRightBottom" -> roadTopRightBottomProbability
+            "roadRightBottomLeft" -> roadRightBottomLeftProbability
+            "roadBottomLeftTop" -> roadBottomLeftTopProbability
             else -> 0
         }
         if(getTileLimit(tile)>0){
@@ -78,6 +96,10 @@ class Path(private var limitX: Int,private var limitY: Int, private var tileSize
             "roadLeftBottom" -> roadLeftBottomLimit
             "roadRightTop" -> roadRightTopLimit
             "roadRightBottom" -> roadRightBottomLimit
+            "roadLeftTopRight" -> roadLeftTopRightLimit
+            "roadTopRightBottom" -> roadTopRightBottomLimit
+            "roadRightBottomLeft" -> roadRightBottomLeftLimit
+            "roadBottomLeftTop" -> roadBottomLeftTopLimit
             else -> 0
         }
     }
@@ -91,6 +113,10 @@ class Path(private var limitX: Int,private var limitY: Int, private var tileSize
             "roadLeftBottom" -> roadLeftBottomLimit--
             "roadRightTop" -> roadRightTopLimit--
             "roadRightBottom" -> roadRightBottomLimit--
+            "roadLeftTopRight" -> roadLeftTopRightLimit--
+            "roadTopRightBottom" -> roadTopRightBottomLimit--
+            "roadRightBottomLeft" -> roadRightBottomLeftLimit--
+            "roadBottomLeftTop" -> roadBottomLeftTopLimit--
         }
     }
 
@@ -100,16 +126,16 @@ class Path(private var limitX: Int,private var limitY: Int, private var tileSize
         var avaible = arrayListOf<String>()
         when (joint) {
             "top" -> {
-                avaible = arrayListOf("roadVertical","roadCrossing4","roadLeftBottom","roadRightBottom")
+                avaible = arrayListOf("roadVertical","roadCrossing4","roadLeftBottom","roadRightBottom","roadBottomLeftTop","roadRightBottomLeft","roadTopRightBottom")
             }
             "bottom" -> {
-                avaible = arrayListOf("roadVertical","roadCrossing4","roadLeftTop","roadRightTop")
+                avaible = arrayListOf("roadVertical","roadCrossing4","roadLeftTop","roadRightTop","roadBottomLeftTop","roadTopRightBottom", "roadLeftTopRight")
             }
             "left" -> {
-                avaible = arrayListOf("roadHorizontal","roadCrossing4","roadRightBottom","roadRightTop")
+                avaible = arrayListOf("roadHorizontal","roadCrossing4","roadRightBottom","roadRightTop","roadTopRightBottom", "roadLeftTopRight","roadRightBottomLeft")
             }
             "right" -> {
-                avaible = arrayListOf("roadHorizontal","roadCrossing4","roadLeftBottom","roadLeftTop")
+                avaible = arrayListOf("roadHorizontal","roadCrossing4","roadLeftBottom","roadLeftTop","roadBottomLeftTop", "roadLeftTopRight","roadRightBottomLeft")
             }
         }
 

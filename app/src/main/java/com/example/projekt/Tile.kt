@@ -173,3 +173,54 @@ class RoadRightBottom(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, ti
         super.draw(canvas,drawable)
     }
 }
+
+class RoadLeftTopRight(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
+    init{
+        jointLeft = "free"
+        jointTop = "free"
+        jointRight = "free"
+    }
+    override fun draw(canvas : Canvas,drawables: Drawables){
+        val drawable = drawables.tileRoadLeftTopRight
+        super.draw(canvas,drawable)
+    }
+}
+
+class RoadTopRightBottom(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
+    init{
+        jointTop = "free"
+        jointRight = "free"
+        jointBottom = "free"
+    }
+    override fun draw(canvas : Canvas,drawables: Drawables){
+        val drawable = drawables.tileRoadTopRightBottom
+        super.draw(canvas,drawable)
+    }
+}
+
+class RoadRightBottomLeft(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
+    init{
+        jointRight = "free"
+        jointBottom = "free"
+        jointLeft = "free"
+    }
+    override fun draw(canvas : Canvas,drawables: Drawables){
+        val drawable = drawables.tileRoadRightBottomLeft
+        super.draw(canvas,drawable)
+    }
+}
+
+class RoadBottomLeftTop(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
+    init{
+        jointTop = "free"
+        jointBottom = "free"
+        jointLeft = "free"
+    }
+    override fun draw(canvas : Canvas,drawables: Drawables){
+        val drawable = drawables.tileRoadBottomLeftTop
+        super.draw(canvas,drawable)
+    }
+}
+
+
+

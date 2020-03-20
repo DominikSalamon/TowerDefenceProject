@@ -47,6 +47,14 @@ class MenuPlay : Fragment() {
             intent.putExtra( "s14",sText14.text.toString().toInt())
             intent.putExtra( "s15",sText15.text.toString().toInt())
             intent.putExtra( "s16",sText16.text.toString().toInt())
+            intent.putExtra( "s17",sText17.text.toString().toInt())
+            intent.putExtra( "s18",sText18.text.toString().toInt())
+            intent.putExtra( "s19",sText19.text.toString().toInt())
+            intent.putExtra( "s20",sText20.text.toString().toInt())
+            intent.putExtra( "s21",sText21.text.toString().toInt())
+            intent.putExtra( "s22",sText22.text.toString().toInt())
+            intent.putExtra( "s23",sText23.text.toString().toInt())
+            intent.putExtra( "s24",sText24.text.toString().toInt())
 
             intent.putExtra( "xTiles",xTiles)
             intent.putExtra( "yTiles",yTiles)
@@ -224,6 +232,95 @@ class MenuPlay : Fragment() {
             override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
                 // Display the current progress of SeekBar
                 sText16.text = (i).toString()
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar){}
+            override fun onStopTrackingTouch(seekBar: SeekBar){}
+        })
+
+
+        seekBar17.max = 50
+        sText17.text = "0"
+        seekBar17.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
+                // Display the current progress of SeekBar
+                sText17.text = (i).toString()
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar){}
+            override fun onStopTrackingTouch(seekBar: SeekBar){}
+        })
+
+        seekBar18.max = 20
+        sText18.text = "0"
+        seekBar18.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
+                // Display the current progress of SeekBar
+                sText18.text = (i).toString()
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar){}
+            override fun onStopTrackingTouch(seekBar: SeekBar){}
+        })
+
+        seekBar19.max = 50
+        sText19.text = "0"
+        seekBar19.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
+                // Display the current progress of SeekBar
+                sText19.text = (i).toString()
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar){}
+            override fun onStopTrackingTouch(seekBar: SeekBar){}
+        })
+
+        seekBar20.max = 20
+        sText20.text = "0"
+        seekBar20.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
+                // Display the current progress of SeekBar
+                sText20.text = (i).toString()
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar){}
+            override fun onStopTrackingTouch(seekBar: SeekBar){}
+        })
+
+        seekBar21.max = 50
+        sText21.text = "0"
+        seekBar21.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
+                // Display the current progress of SeekBar
+                sText21.text = (i).toString()
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar){}
+            override fun onStopTrackingTouch(seekBar: SeekBar){}
+        })
+
+        seekBar22.max = 20
+        sText22.text = "0"
+        seekBar22.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
+                // Display the current progress of SeekBar
+                sText22.text = (i).toString()
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar){}
+            override fun onStopTrackingTouch(seekBar: SeekBar){}
+        })
+
+        seekBar23.max = 50
+        sText23.text = "0"
+        seekBar23.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
+                // Display the current progress of SeekBar
+                sText23.text = (i).toString()
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar){}
+            override fun onStopTrackingTouch(seekBar: SeekBar){}
+        })
+
+        seekBar24.max = 20
+        sText24.text = "0"
+        seekBar24.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
+                // Display the current progress of SeekBar
+                sText24.text = (i).toString()
             }
             override fun onStartTrackingTouch(seekBar: SeekBar){}
             override fun onStopTrackingTouch(seekBar: SeekBar){}
