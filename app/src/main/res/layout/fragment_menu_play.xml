@@ -11,84 +11,540 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_weight="3"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#00FF00">
+        android:background="@color/colorLight"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                >
+
+                <TextView
+                    android:text="Tiles Horizontally"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+                <TextView
+                    android:id="@+id/sText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="32dp"
+                >
+                <TextView
+                    android:text="Tiles Vertically"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar2"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+            <TextView
+                android:text="Road Vertical"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:text="Limit"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar3"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                >
+                <TextView
+                    android:text="Probability"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar4"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Road Horizontally"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:text="Limit"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar5"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                >
+                <TextView
+                    android:text="Probability"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar6"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Road Crossing4"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:text="Limit"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar7"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                >
+                <TextView
+                    android:text="Probability"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar8"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Road LeftTop"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:text="Limit"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar9"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                >
+                <TextView
+                    android:text="Probability"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar10"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Road RightTop"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:text="Limit"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar11"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                >
+                <TextView
+                    android:text="Probability"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar12"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Road LeftBottom"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:text="Limit"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar13"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                >
+                <TextView
+                    android:text="Probability"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar14"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Road RightBottom"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:text="Limit"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar15"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                >
+                <TextView
+                    android:text="Probability"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekBar16"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/sText16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+
+
+
+
+            <Button
+                android:id="@+id/button_play2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_button"
+                android:text="@string/menu_play"
+                android:textAllCaps="false"
+                android:textColor="#F0F0F0"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
 
     </ScrollView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint2"
-        android:layout_weight="2"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:background="#FF0000">
 
-        <Button
-            android:id="@+id/button_play2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/rounded_button"
-            android:text="@string/menu_play"
-            android:textAllCaps="false"
-            android:textColor="#F0F0F0"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
-        <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="200dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginBottom="32dp"
-            app:layout_constraintBottom_toTopOf="@+id/seekBar2"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <SeekBar
-            android:id="@+id/seekBar2"
-            android:layout_width="200dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginBottom="32dp"
-            app:layout_constraintBottom_toTopOf="@+id/checkBox"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="200dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginBottom="64dp"
-            android:text="Random Map"
-            android:textColor ="@color/colorDark"
-            app:layout_constraintBottom_toTopOf="@+id/button_play2"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/sText1"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginBottom="32dp"
-            app:layout_constraintBottom_toTopOf="@+id/sText2"
-            app:layout_constraintStart_toEndOf="@+id/seekBar" />
-
-        <TextView
-            android:id="@+id/sText2"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginBottom="32dp"
-            app:layout_constraintBottom_toTopOf="@+id/checkBox"
-            app:layout_constraintStart_toEndOf="@+id/seekBar2" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

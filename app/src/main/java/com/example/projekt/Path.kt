@@ -1,24 +1,26 @@
 package com.example.projekt
 
+import android.os.Bundle
 
-class Path(private var limitX: Int,private var limitY: Int, private var tileSize: Int){
+
+class Path(private var limitX: Int,private var limitY: Int, private var tileSize: Int, extras: Bundle){
     private var tiles = arrayListOf<Tile>()
 
-    private var roadVerticalLimit = 999
-    private var roadHorizontalLimit = 999
-    private var roadCrossing4Limit = 2
-    private var roadRightTopLimit = 5
-    private var roadRightBottomLimit = 5
-    private var roadLeftBottomLimit = 5
-    private var roadLeftTopLimit = 5
+    private var roadVerticalLimit = extras.getInt("s3")
+    private var roadHorizontalLimit = extras.getInt("s5")
+    private var roadCrossing4Limit = extras.getInt("s7")
+    private var roadRightTopLimit = extras.getInt("s9")
+    private var roadRightBottomLimit = extras.getInt("s11")
+    private var roadLeftBottomLimit = extras.getInt("s13")
+    private var roadLeftTopLimit = extras.getInt("s15")
 
-    private var roadVerticalProbability = 5
-    private var roadHorizontalProbability = 5
-    private var roadCrossing4Probability = 1
-    private var roadRightTopProbability = 1
-    private var roadRightBottomProbability = 1
-    private var roadLeftBottomProbability = 1
-    private var roadLeftTopProbability = 1
+    private var roadVerticalProbability = extras.getInt("s4")
+    private var roadHorizontalProbability = extras.getInt("s6")
+    private var roadCrossing4Probability = extras.getInt("s8")
+    private var roadRightTopProbability = extras.getInt("s10")
+    private var roadRightBottomProbability = extras.getInt("s12")
+    private var roadLeftBottomProbability = extras.getInt("s14")
+    private var roadLeftTopProbability = extras.getInt("s16")
 
 
     private fun getTileFromString(tile: String,x: Int,y: Int): Tile{

@@ -12,7 +12,7 @@ class Board(context: Context, extras: Bundle) {
     private var drawables = Drawables(context)
 
     init{
-        tiles = Path(xTiles,yTiles,tileSize).createRandom()
+        tiles = Path(xTiles,yTiles,tileSize,extras).createRandom()
     }
 
     fun getWidth(): Int{
