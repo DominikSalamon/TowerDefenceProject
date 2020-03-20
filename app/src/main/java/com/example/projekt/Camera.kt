@@ -21,11 +21,11 @@ class Camera(private var screenWidth: Int, private var screenHeight: Int, privat
         x=X-startX
         y=Y-startY
 
-        boardWidth=(boardWidth*scale).toInt()
-        boardHeight=(boardHeight*scale).toInt()
+        val boardWidthScale=(boardWidth*scale).toInt()
+        val boardHeightScale=(boardHeight*scale).toInt()
 
-        val difX = boardWidth-screenWidth
-        val difY = boardHeight-screenHeight
+        val difX = boardWidthScale-screenWidth
+        val difY = boardHeightScale-screenHeight
 
         val minX = -difX-limit
         val minY = -difY-limit
@@ -36,7 +36,7 @@ class Camera(private var screenWidth: Int, private var screenHeight: Int, privat
         }
         else if(difX<0){
             if(x<0) x=0
-            if(x>screenWidth-boardWidth) x=screenWidth-boardWidth
+            if(x>screenWidth-boardWidthScale) x=screenWidth-boardWidthScale
         }
 
         if(difY>0){
@@ -45,7 +45,7 @@ class Camera(private var screenWidth: Int, private var screenHeight: Int, privat
         }
         else if(difY<0){
             if(y<0) y=0
-            if(y>screenHeight-boardHeight) y=screenHeight-boardHeight
+            if(y>screenHeight-boardHeightScale) y=screenHeight-boardHeightScale
         }
 
 
