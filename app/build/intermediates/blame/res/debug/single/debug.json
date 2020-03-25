@@ -40,12 +40,12 @@
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
-    },
-    {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_tile_road_horizontal.png.flat",
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\tile_road_horizontal.png"
+    },
+    {
+        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_tile_road_right_bottom_left.png.flat",
@@ -60,12 +60,16 @@
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_tile_road.png.flat",
+        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\tile_road.png"
     },
     {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_tile_road_top_right_bottom.png.flat",
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\tile_road_top_right_bottom.png"
+    },
+    {
+        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_tile_grass.png.flat",
@@ -88,6 +92,10 @@
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\slide_out_right.xml"
     },
     {
+        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_tile_road.png.flat",
+        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\tile_road.png"
+    },
+    {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
     },
@@ -96,16 +104,16 @@
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\tile_road_top_right_bottom.png"
     },
     {
-        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_tile_road_bottom_left_top.xml.flat",
-        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\tile_road_bottom_left_top.xml"
+        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_tile_road_top_right_bottom.png.flat",
+        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\tile_road_top_right_bottom.png"
     },
     {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_tile_road_right_bottom.png.flat",
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\tile_road_right_bottom.png"
     },
     {
-        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_tile_road_top_right_bottom.png.flat",
-        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\tile_road_top_right_bottom.png"
+        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_tile_road_bottom_left_top.xml.flat",
+        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\tile_road_bottom_left_top.xml"
     },
     {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_tile_grass.png.flat",
@@ -120,6 +128,14 @@
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\tile_road_horizontal.png"
     },
     {
+        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_tile_road.png.flat",
+        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\tile_road.png"
+    },
+    {
+        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_tile_road.png.flat",
+        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\tile_road.png"
+    },
+    {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_tile_road_horizontal.png.flat",
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\tile_road_horizontal.png"
     },
@@ -132,12 +148,12 @@
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\slide_in_right.xml"
     },
     {
-        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
-    },
-    {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_tile_road_bottom_left_top.png.flat",
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\tile_road_bottom_left_top.png"
+    },
+    {
+        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_tile_road_right_top.png.flat",
@@ -158,6 +174,10 @@
     {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_menu_settings.xml.flat",
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\layout\\fragment_menu_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_tile_road.png.flat",
+        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\tile_road.png"
     },
     {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_tile_mountain.xml.flat",
@@ -238,6 +258,10 @@
     {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_game.xml.flat",
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\layout\\game.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_tile_road.png.flat",
+        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\tile_road.png"
     },
     {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_out.xml.flat",
@@ -368,6 +392,10 @@
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\layout\\fragment_menu_play.xml"
     },
     {
+        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_tile_road.xml.flat",
+        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v21\\tile_road.xml"
+    },
+    {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_tile_road_right_top.xml.flat",
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\tile_road_right_top.xml"
     },
@@ -470,6 +498,10 @@
     {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_tile_road_left_bottom.png.flat",
         "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\tile_road_left_bottom.png"
+    },
+    {
+        "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_tile_road.xml.flat",
+        "source": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\tile_road.xml"
     },
     {
         "merged": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_tile_road_right_bottom.png.flat",

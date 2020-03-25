@@ -223,4 +223,9 @@ class RoadBottomLeftTop(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, 
 }
 
 
-
+class Road(posX: Int, posY: Int, tileSize: Int) : Tile(posX, posY, tileSize) {
+    override fun draw(canvas: Canvas, drawables: Drawables) {
+        val drawable = drawables.tileRoad
+        super.draw(canvas,drawable)
+    }
+}

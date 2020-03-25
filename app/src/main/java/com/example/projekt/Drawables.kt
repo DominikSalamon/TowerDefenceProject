@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.appcompat.content.res.AppCompatResources
 
 class Drawables(context: Context){
+    val tileRoad = AppCompatResources.getDrawable(context, R.drawable.tile_road)
     val tileRoadHorizontal = AppCompatResources.getDrawable(context, R.drawable.tile_road_horizontal)
     val tileRoadVertical = AppCompatResources.getDrawable(context, R.drawable.tile_road_vertical)
     val tileRoadCrossing4 = AppCompatResources.getDrawable(context, R.drawable.tile_road_crossing4)

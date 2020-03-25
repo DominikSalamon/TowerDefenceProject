@@ -704,6 +704,7 @@ drawable notify_panel_notification_icon_bg
 drawable rounded_button
 drawable tile_grass
 drawable tile_mountain
+drawable tile_road
 drawable tile_road_bottom_left_top
 drawable tile_road_crossing4
 drawable tile_road_horizontal

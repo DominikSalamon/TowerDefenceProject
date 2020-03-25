@@ -17,8 +17,10 @@ import androidx.core.content.ContextCompat
 class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) : SurfaceView(context),
     SurfaceHolder.Callback {
     private val gameLoop: GameLoop
-    private var board : Board
-    private val camera : Camera
+    //private var board : Board
+    //private val camera : Camera
+
+    private val mapka : Mapka
 
 
 
@@ -43,10 +45,10 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
 
         canvas.save()
 
-        canvas.translate(camera.getX().toFloat(),camera.getY().toFloat())
-        canvas.scale(camera.scale,camera.scale)
-
-        board.draw(canvas)
+       // canvas.translate(camera.getX().toFloat(),camera.getY().toFloat())
+       // canvas.scale(camera.scale,camera.scale)
+        mapka.draw(canvas, Drawables(context))
+       // board.draw(canvas)
 
         canvas.restore()
 
@@ -84,11 +86,12 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
         gameLoop = GameLoop(this, surfaceHolder)
         isFocusable = true
 
-        board = Board(context, extras)
-        camera = Camera(screenWidth, screenHeight,board.getWidth(),board.getHeight())
+        mapka = Mapka()
+        //board = Board(context, extras)
+        //camera = Camera(screenWidth, screenHeight,board.getWidth(),board.getHeight())
     }
 
-    private val scaleListener = object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
+   /* private val scaleListener = object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
 
         override fun onScale(detector: ScaleGestureDetector): Boolean {
             camera.scale *= detector.scaleFactor
@@ -121,5 +124,5 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
 
 
         return super.onTouchEvent(event)
-    }
+    }*/
 }
