@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "C:\\Users\\Adminek\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Dominik\\.gradle\\caches\\transforms-2\\files-2.1\\5988781b109aa2e81ee2deed8375ae92\\appcompat-1.1.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\Adminek\\.gradle\\caches\\transforms-2\\files-2.1\\5988781b109aa2e81ee2deed8375ae92\\appcompat-1.1.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
