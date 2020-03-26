@@ -22,11 +22,14 @@ class MenuPlay : Fragment() {
 
     }
 
+    var id_map = 1
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        button_play3.setOnClickListener{
+            MenuPlay().id_map = 2
 
-
+        }
         button_play2.setOnClickListener{
             val intent = Intent(activity, GameActivity::class.java)
 

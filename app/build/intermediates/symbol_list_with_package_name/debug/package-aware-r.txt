@@ -790,6 +790,7 @@ id buttonPanel
 id button_back
 id button_play
 id button_play2
+id button_play3
 id button_settings
 id cancel_action
 id center
