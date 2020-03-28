@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\TowerDefenceProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
+            "outputFile": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pawli\\.gradle\\caches\\transforms-2\\files-2.1\\5988781b109aa2e81ee2deed8375ae92\\appcompat-1.1.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "C:\\Users\\Dominik\\.gradle\\caches\\transforms-2\\files-2.1\\5988781b109aa2e81ee2deed8375ae92\\appcompat-1.1.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -679,6 +679,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable base
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -718,6 +719,7 @@ drawable tile_road_top_right_bottom
 drawable tile_road_vertical
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable treees
 id ALT
 id CTRL
 id FUNCTION
@@ -788,9 +790,11 @@ id blocking
 id bottom
 id buttonPanel
 id button_back
+id button_mapa1
+id button_mapa2
+id button_mapa3
 id button_play
 id button_play2
-id button_play3
 id button_settings
 id cancel_action
 id center
@@ -1018,7 +1022,6 @@ layout custom_dialog
 layout fragment_menu_home
 layout fragment_menu_play
 layout fragment_menu_settings
-layout game
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action

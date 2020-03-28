@@ -22,19 +22,26 @@ class MenuPlay : Fragment() {
 
     }
 
-    var id_map = 1
+    private var idMap = 1
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        button_play3.setOnClickListener{
-            MenuPlay().id_map = 2
-
+        button_mapa1.setOnClickListener{
+            idMap = 1
+        }
+        button_mapa2.setOnClickListener{
+            idMap = 2
+        }
+        button_mapa3.setOnClickListener{
+            idMap = 3
         }
         button_play2.setOnClickListener{
             val intent = Intent(activity, GameActivity::class.java)
 
             val xTiles = sText1.text.toString().toInt()
             val yTiles = sText2.text.toString().toInt()
+
+            intent.putExtra( "idMap",idMap.toString())
 
             intent.putExtra( "s3",sText3.text.toString().toInt())
             intent.putExtra( "s4",sText4.text.toString().toInt())

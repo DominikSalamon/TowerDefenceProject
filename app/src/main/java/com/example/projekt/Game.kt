@@ -86,7 +86,7 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
         gameLoop = GameLoop(this, surfaceHolder)
         isFocusable = true
 
-        mapka = Mapka()
+        mapka = Mapka(extras.get("idMap") as String)
         //board = Board(context, extras)
         //camera = Camera(screenWidth, screenHeight,board.getWidth(),board.getHeight())
     }

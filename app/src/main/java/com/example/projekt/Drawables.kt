@@ -17,4 +17,7 @@ class Drawables(context: Context){
     val tileRoadTopRightBottom = AppCompatResources.getDrawable(context, R.drawable.tile_road_top_right_bottom)
     val tileRoadRightBottomLeft = AppCompatResources.getDrawable(context, R.drawable.tile_road_right_bottom_left)
     val tileRoadBottomLeftTop= AppCompatResources.getDrawable(context, R.drawable.tile_road_bottom_left_top)
+    val trees = AppCompatResources.getDrawable(context, R.drawable.treees)
+    val mountain = AppCompatResources.getDrawable(context, R.drawable.tile_mountain)
+    val base = AppCompatResources.getDrawable(context, R.drawable.base)
 }

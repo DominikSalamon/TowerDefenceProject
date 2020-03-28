@@ -24,6 +24,7 @@ class GameActivity : Activity() {
         val extras = intent.extras!!
 
         val metrics = DisplayMetrics()
+
         windowManager.defaultDisplay.getMetrics(metrics)
 
 

@@ -2,7 +2,7 @@ package com.example.projekt
 
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
-class Mapka{
+class Mapka(private val idMap: String){
     private val tileSize = 100
     private val map1 =
         arrayOf(intArrayOf(0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -45,6 +45,13 @@ class Mapka{
             intArrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0)
         )
 
+    private val choosedMap =  when(idMap){
+        "1" -> map1
+        "2" -> map2
+        "3" -> map3
+        else -> map1
+    }
+
 
     private fun getDrawable(i: Int, drawables: Drawables): Drawable? {
         return when(i){
@@ -54,39 +61,21 @@ class Mapka{
 
     }
 
-    fun draw(canvas: Canvas, drawables: Drawables){
-        if(MenuPlay().id_map == 1){
-        for(i in 0 until 11) {
+    fun draw(canvas: Canvas, drawables: Drawables) {
+
+        for (i in 0 until 11) {
             for (j in 0 until 15) {
-                val drawable = getDrawable(map1[i][j], drawables)
-                drawable?.setBounds(j * tileSize, i * tileSize, (j + 1) * tileSize, (i + 1) * tileSize
+                val drawable = getDrawable(choosedMap[i][j], drawables)
+                drawable?.setBounds(
+                    j * tileSize,
+                    i * tileSize,
+                    (j + 1) * tileSize,
+                    (i + 1) * tileSize
                 )
                 drawable?.draw(canvas)
-                }
             }
         }
-        else if(MenuPlay().id_map == 2) {
-            for(i in 0 until 11) {
-                for (j in 0 until 15) {
-                    val drawable = getDrawable(map2[i][j], drawables)
-                    drawable?.setBounds(j * tileSize, i * tileSize, (j + 1) * tileSize, (i + 1) * tileSize
-                    )
-                    drawable?.draw(canvas)
-                }
-            }
-        }
-        else if(MenuPlay().id_map == 3) {
-            for(i in 0 until 11) {
-                for (j in 0 until 15) {
-                    val drawable = getDrawable(map3[i][j], drawables)
-                    drawable?.setBounds(j * tileSize, i * tileSize, (j + 1) * tileSize, (i + 1) * tileSize
-                    )
-                    drawable?.draw(canvas)
-                }
-            }
-        }
+
     }
-
-
 
 }
