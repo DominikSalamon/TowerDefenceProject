@@ -18,7 +18,7 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
     SurfaceHolder.Callback {
     private val gameLoop: GameLoop
     //private var board : Board
-    //private val camera : Camera
+    private val camera : Camera
 
     private val mapka : Mapka
 
@@ -45,11 +45,13 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
 
         canvas.save()
 
-       // canvas.translate(camera.getX().toFloat(),camera.getY().toFloat())
-       // canvas.scale(camera.scale,camera.scale)
+
+        canvas.drawRGB(240,240,240)
+
+        canvas.translate(camera.getX().toFloat(),camera.getY().toFloat())
+        canvas.scale(camera.scale,camera.scale)
         mapka.draw(canvas, Drawables(context))
        // board.draw(canvas)
-
         canvas.restore()
 
         drawUPS(canvas)
@@ -88,10 +90,10 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
 
         mapka = Mapka(extras.get("idMap") as String)
         //board = Board(context, extras)
-        //camera = Camera(screenWidth, screenHeight,board.getWidth(),board.getHeight())
+        camera = Camera(screenWidth, screenHeight,1500,1100)
     }
 
-   /* private val scaleListener = object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
+   private val scaleListener = object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
 
         override fun onScale(detector: ScaleGestureDetector): Boolean {
             camera.scale *= detector.scaleFactor
@@ -124,5 +126,5 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
 
 
         return super.onTouchEvent(event)
-    }*/
+    }
 }
