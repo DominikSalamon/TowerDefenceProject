@@ -11,16 +11,17 @@ import android.view.ScaleGestureDetector
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import androidx.core.content.ContextCompat
-
+import com.example.projekt.R
 
 @SuppressLint("ViewConstructor")
 class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) : SurfaceView(context),
     SurfaceHolder.Callback {
     private val gameLoop: GameLoop
-    //private var board : Board
-    private val camera : Camera
 
+    private val camera : Camera
     private val mapka : Mapka
+
+    private val drawables = Drawables(context)
 
 
 
@@ -50,8 +51,7 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
 
         canvas.translate(camera.getX().toFloat(),camera.getY().toFloat())
         canvas.scale(camera.scale,camera.scale)
-        mapka.draw(canvas, Drawables(context))
-       // board.draw(canvas)
+        mapka.draw(canvas, drawables)
         canvas.restore()
 
         drawUPS(canvas)
@@ -88,8 +88,10 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
         gameLoop = GameLoop(this, surfaceHolder)
         isFocusable = true
 
-        mapka = Mapka(extras.get("idMap") as String)
-        //board = Board(context, extras)
+        mapka = Mapka(extras.get("idMap").toString(),resources)
+
+
+
         camera = Camera(screenWidth, screenHeight,1500,1100)
     }
 

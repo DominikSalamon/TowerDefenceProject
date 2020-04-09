@@ -64,6 +64,10 @@
         "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\tile_road_top_right_bottom.png"
     },
     {
+        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\raw_map3.json.flat",
+        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\raw\\map3.json"
+    },
+    {
         "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_tile_road_top_right_bottom.png.flat",
         "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\tile_road_top_right_bottom.png"
     },
@@ -250,6 +254,10 @@
     {
         "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_tile_road.png.flat",
         "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\tile_road.png"
+    },
+    {
+        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\raw_map1.json.flat",
+        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\raw\\map1.json"
     },
     {
         "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_tile_road_right_top.png.flat",
@@ -454,6 +462,10 @@
     {
         "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_tile_road_crossing4.png.flat",
         "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\tile_road_crossing4.png"
+    },
+    {
+        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\raw_map2.json.flat",
+        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\raw\\map2.json"
     },
     {
         "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_tile_road_vertical.png.flat",
