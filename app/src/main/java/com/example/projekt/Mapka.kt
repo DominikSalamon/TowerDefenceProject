@@ -36,8 +36,8 @@ class Mapka(idMap: String,resources: Resources){
     }
 
     fun draw(canvas: Canvas, drawables: Drawables) {
-        for (i in 0 until 11) {
-            for (j in 0 until 15) {
+        for (i in 0 until map.height) {
+            for (j in 0 until map.width) {
                 val drawable = getDrawable(map.tiles[i][j], drawables)
                 drawable?.setBounds(
                     j * tileSize,
