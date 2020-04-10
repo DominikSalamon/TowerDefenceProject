@@ -61,7 +61,10 @@ class MapFactory(idMap: String,resources: Resources){
     private fun getDrawable(i: Int, drawables: Drawables): Drawable? {
         return when(i){
             0 -> drawables.tileGrass
-            else -> drawables.tileRoad
+            1 -> drawables.tileRoad
+            2 -> drawables.trees
+            3 -> drawables.mountain
+            else -> drawables.tileGrass
         }
     }
 

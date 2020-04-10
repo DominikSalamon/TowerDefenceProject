@@ -5,7 +5,9 @@
     android:width="100dp"
     android:height="100dp">
 
-
+    <path
+        android:pathData="M0,0L100,0L100,100L0,100"
+        android:fillColor="#ADE17F" />
 
     <group
         android:scaleX="1.5"
