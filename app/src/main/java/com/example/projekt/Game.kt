@@ -11,17 +11,18 @@ import android.view.ScaleGestureDetector
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import androidx.core.content.ContextCompat
-import com.example.projekt.R
 
 @SuppressLint("ViewConstructor")
 class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) : SurfaceView(context),
     SurfaceHolder.Callback {
     private val gameLoop: GameLoop
 
-    private val camera : Camera
-    private val mapka : Mapka
+    private val drawables: Drawables
 
-    private val drawables = Drawables(context)
+    private val camera: Camera
+    private val highlight: Highlight
+    private val mapFactory : MapFactory
+
 
 
 
@@ -48,10 +49,13 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
 
 
         canvas.drawRGB(240,240,240)
+        canvas.translate(camera.getX(),camera.getY())
+        canvas.scale(camera.getScale(),camera.getScale())
 
-        canvas.translate(camera.getX().toFloat(),camera.getY().toFloat())
-        canvas.scale(camera.scale,camera.scale)
-        mapka.draw(canvas, drawables)
+
+        mapFactory.drawMap(canvas,drawables)
+        highlight.draw(canvas,drawables)
+
         canvas.restore()
 
         drawUPS(canvas)
@@ -88,20 +92,19 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
         gameLoop = GameLoop(this, surfaceHolder)
         isFocusable = true
 
-        mapka = Mapka(extras.get("idMap").toString(),resources)
+        drawables = Drawables(context)
 
+        mapFactory = MapFactory(extras.get("idMap").toString(),resources)
 
-
-        camera = Camera(screenWidth, screenHeight,1500,1100)
+        camera = Camera(screenWidth, screenHeight,mapFactory.getMapWidth(),mapFactory.getMapHeight())
+        highlight = Highlight(mapFactory)
     }
 
    private val scaleListener = object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
 
         override fun onScale(detector: ScaleGestureDetector): Boolean {
-            camera.scale *= detector.scaleFactor
 
-            // Don't let the object get too small or too large.
-            camera.scale = 0.1f.coerceAtLeast(camera.scale.coerceAtMost(3.0f))
+            camera.scaling(detector.scaleFactor)
 
             invalidate()
             return true
@@ -117,11 +120,12 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
 
         when(event.action){
             MotionEvent.ACTION_DOWN -> {
-                camera.startPoint(event.x.toInt(),event.y.toInt())
+                camera.startPoint(event.x,event.y)
+                highlight.activate(event.x,event.y,camera)
                 return true
             }
             MotionEvent.ACTION_MOVE -> {
-                camera.move(event.x.toInt(),event.y.toInt())
+                camera.move(event.x,event.y)
                 return true
             }
         }

@@ -3,21 +3,32 @@ package com.example.projekt
 
 
 class Camera(private var screenWidth: Int, private var screenHeight: Int, private var boardWidth: Int, private var boardHeight: Int){
-    private var x = 0
-    private var y = 0
-    private var prevX = 0
-    private var prevY = 0
-    private var startX = 0
-    private var startY = 0
-    private var limit = 200
-    var scale = 1f
 
-    fun startPoint(x: Int, y: Int) {
+    private var limit = 200f
+    private var scale = 1f
+    private val scaleMax = 3f
+    private val scaleMin= 0.3f
+
+    private var x = 0f
+    private var y = 0f
+    private var prevX = 0f
+    private var prevY = 0f
+    private var startX = 0f
+    private var startY = 0f
+
+    fun scaling(scaleFactor: Float){
+        scale *= scaleFactor
+        scale = scaleMin.coerceAtLeast(scale.coerceAtMost(scaleMax))
+    }
+
+
+
+    fun startPoint(x: Float, y: Float) {
         startX = x - prevX
         startY = y - prevY
     }
 
-    fun move(X: Int, Y: Int){
+    fun move(X: Float, Y: Float){
         x=X-startX
         y=Y-startY
 
@@ -35,8 +46,8 @@ class Camera(private var screenWidth: Int, private var screenHeight: Int, privat
             if(x<minX) x=minX
         }
         else if(difX<0){
-            if(x<0) x=0
-            if(x>screenWidth-boardWidthScale) x=screenWidth-boardWidthScale
+            if(x<0) x=0f
+            if(x>screenWidth-boardWidthScale) x= (screenWidth-boardWidthScale).toFloat()
         }
 
         if(difY>0){
@@ -44,8 +55,8 @@ class Camera(private var screenWidth: Int, private var screenHeight: Int, privat
             if(y<minY) y=minY
         }
         else if(difY<0){
-            if(y<0) y=0
-            if(y>screenHeight-boardHeightScale) y=screenHeight-boardHeightScale
+            if(y<0) y=0f
+            if(y>screenHeight-boardHeightScale) y= (screenHeight-boardHeightScale).toFloat()
         }
 
 
@@ -54,6 +65,7 @@ class Camera(private var screenWidth: Int, private var screenHeight: Int, privat
         prevY=y
     }
 
-    fun getX(): Int { return x }
-    fun getY(): Int { return y }
+    fun getX(): Float { return x }
+    fun getY(): Float { return y }
+    fun getScale(): Float{ return scale }
 }
