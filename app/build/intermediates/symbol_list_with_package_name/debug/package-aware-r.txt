@@ -688,8 +688,11 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable buy_menu
+drawable buy_menu2
 drawable gradient_color
 drawable highlight
+drawable highlight_red
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable notification_action_background
@@ -710,7 +713,12 @@ drawable tile_mountain
 drawable tile_road
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable tower1
+drawable tower2
+drawable tower3
 drawable tower_test
+drawable tower_test2
+drawable tower_test3
 drawable treees
 id ALT
 id CTRL
@@ -785,6 +793,7 @@ id button_back
 id button_mapa1
 id button_mapa2
 id button_mapa3
+id button_mapa4
 id button_play
 id button_play2
 id button_settings
@@ -990,6 +999,7 @@ mipmap ic_launcher_round
 raw map1
 raw map2
 raw map3
+raw map4
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

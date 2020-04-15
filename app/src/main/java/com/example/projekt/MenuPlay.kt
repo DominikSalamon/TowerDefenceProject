@@ -34,6 +34,9 @@ class MenuPlay : Fragment() {
         button_mapa3.setOnClickListener{
             idMap = 3
         }
+        button_mapa4.setOnClickListener{
+            idMap = 4
+        }
         button_play2.setOnClickListener{
             val intent = Intent(activity, GameActivity::class.java)
             intent.putExtra( "idMap",idMap.toString())

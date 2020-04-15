@@ -7,7 +7,7 @@ class Camera(private var screenWidth: Int, private var screenHeight: Int, privat
     private var limit = 200f
     private var scale = 1f
     private val scaleMax = 3f
-    private val scaleMin= 0.3f
+    private val scaleMin= 0.5f
 
     private var x = 0f
     private var y = 0f
@@ -64,8 +64,11 @@ class Camera(private var screenWidth: Int, private var screenHeight: Int, privat
         prevX=x
         prevY=y
     }
-
     fun getX(): Float { return x }
     fun getY(): Float { return y }
+
+    fun getRealX(X: Float): Int { return ((X-getX())/getScale()).toInt() }
+    fun getRealY(Y: Float): Int { return ((Y-getY())/getScale()).toInt() }
+
     fun getScale(): Float{ return scale }
 }
