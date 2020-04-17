@@ -1,4 +1,7 @@
-#Fri Apr 10 17:42:12 CEST 2020
-base.0=C\:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
+#Wed Apr 15 15:53:56 CEST 2020
+base.0=C\:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
+base.1=C\:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex

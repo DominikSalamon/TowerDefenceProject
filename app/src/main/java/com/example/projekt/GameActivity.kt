@@ -5,12 +5,15 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.util.DisplayMetrics
+import android.util.Log
 import android.view.View
 import androidx.annotation.RequiresApi
 
 class GameActivity : Activity() {
+    private lateinit var game: Game
     @RequiresApi(Build.VERSION_CODES.KITKAT)
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d("GameActivity.kt","onCreate")
         super.onCreate(savedInstanceState)
 
         hideSystemUI()
@@ -29,14 +32,41 @@ class GameActivity : Activity() {
 
 
 
-
-        setContentView(Game(metrics.widthPixels,metrics.heightPixels,this, extras))
+        game = Game(metrics.widthPixels,metrics.heightPixels,this, extras)
+        setContentView(game)
     }
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
         if (hasFocus) hideSystemUI()
     }
 
+    override fun onStart() {
+        Log.d("GameActivity.kt","onStart")
+        super.onStart()
+    }
+
+    override fun onResume() {
+        Log.d("GameActivity.kt","onResume")
+        super.onResume()
+        game
+    }
+
+
+    override fun onPause() {
+        Log.d("GameActivity.kt","onPause")
+        game.pause()
+        super.onPause()
+    }
+
+    override fun onStop() {
+        Log.d("GameActivity.kt","onStop")
+        super.onStop()
+    }
+
+    override fun onDestroy() {
+        Log.d("GameActivity.kt","onDestroy")
+        super.onDestroy()
+    }
 
 
     private fun hideSystemUI() {

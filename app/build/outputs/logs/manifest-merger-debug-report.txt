@@ -79,7 +79,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Do
 activity#com.example.projekt.MainActivity
 ADDED from C:\Users\Dominik\AndroidStudioProjects\TowerDefenceProject\app\src\main\AndroidManifest.xml:12:9-19:20
 	android:screenOrientation
-		ADDED from C:\Users\Dominik\AndroidStudioProjects\TowerDefenceProject\app\src\main\AndroidManifest.xml:13:17-54
+		ADDED from C:\Users\Dominik\AndroidStudioProjects\TowerDefenceProject\app\src\main\AndroidManifest.xml:13:17-55
 	android:name
 		ADDED from C:\Users\Dominik\AndroidStudioProjects\TowerDefenceProject\app\src\main\AndroidManifest.xml:12:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
@@ -95,7 +95,7 @@ ADDED from C:\Users\Dominik\AndroidStudioProjects\TowerDefenceProject\app\src\ma
 activity#com.example.projekt.GameActivity
 ADDED from C:\Users\Dominik\AndroidStudioProjects\TowerDefenceProject\app\src\main\AndroidManifest.xml:20:9-25:20
 	android:screenOrientation
-		ADDED from C:\Users\Dominik\AndroidStudioProjects\TowerDefenceProject\app\src\main\AndroidManifest.xml:21:13-50
+		ADDED from C:\Users\Dominik\AndroidStudioProjects\TowerDefenceProject\app\src\main\AndroidManifest.xml:21:13-51
 	android:name
 		ADDED from C:\Users\Dominik\AndroidStudioProjects\TowerDefenceProject\app\src\main\AndroidManifest.xml:20:19-47
 meta-data#android.support.PARENT_ACTIVITY

@@ -1,6 +1,7 @@
 package com.example.projekt
 
 import android.graphics.Canvas
+import android.util.Log
 import android.view.SurfaceHolder
 
 class GameLoop(private val game: Game, private val surfaceHolder: SurfaceHolder) :
@@ -12,11 +13,27 @@ class GameLoop(private val game: Game, private val surfaceHolder: SurfaceHolder)
         private set
 
     fun startLoop() {
-        isRunning = true
+        Log.d("GameLoop.kt","startLoop")
+        if(!isRunning)
+            isRunning=true
         start()
     }
 
+    fun stopLoop(){
+        Log.d("GameLoop.kt","stopLoop")
+        if(isRunning)
+            isRunning = false
+
+        try{
+            join()
+        }catch (e: InterruptedException){
+            e.printStackTrace()
+        }
+
+    }
+
     override fun run() {
+        Log.d("GameLoop.kt","run")
         super.run()
         var updateCount = 0
         var frameCount = 0
@@ -31,8 +48,7 @@ class GameLoop(private val game: Game, private val surfaceHolder: SurfaceHolder)
                 synchronized(surfaceHolder) {
                     game.update()
                     updateCount++
-                    if(canvas!=null)
-                        game.draw(canvas)
+                    game.draw(canvas)
                 }
             } catch (e: IllegalArgumentException) {
                 e.printStackTrace()
