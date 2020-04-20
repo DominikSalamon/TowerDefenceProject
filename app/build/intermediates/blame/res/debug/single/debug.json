@@ -160,6 +160,10 @@
         "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\slide_in_right.xml"
     },
     {
+        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_enemy.xml.flat",
+        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\enemy.xml"
+    },
+    {
         "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\raw_map4.json.flat",
         "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\raw\\map4.json"
     },

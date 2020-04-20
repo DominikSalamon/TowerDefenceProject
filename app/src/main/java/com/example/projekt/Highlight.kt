@@ -4,7 +4,7 @@ import android.graphics.Canvas
 import android.graphics.drawable.Drawable
 import kotlin.math.floor
 
-class Highlight(private val mapFactory: MapFactory,drawables: Drawables){
+class Highlight(private val mapManager: MapManager, drawables: Drawables){
     private var drawableG = drawables.highlight
     private var drawableR = drawables.highlight_red
     private var x = 0f
@@ -17,7 +17,7 @@ class Highlight(private val mapFactory: MapFactory,drawables: Drawables){
         val trueY = floor(realY/100f)
 
         doubleTapped = x==trueX&&y==trueY
-        active = mapFactory.isTileFree(trueX.toInt(),trueY.toInt())
+        active = mapManager.isTileFree(trueX.toInt(),trueY.toInt())
 
         x=trueX
         y=trueY

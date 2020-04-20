@@ -690,6 +690,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable buy_menu
 drawable buy_menu2
+drawable enemy
 drawable gradient_color
 drawable highlight
 drawable highlight_red

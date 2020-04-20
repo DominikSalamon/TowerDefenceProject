@@ -24,10 +24,15 @@ class Game(private val screenWidth: Int,screenHeight: Int,context: Context, extr
     private val player: Player
     private val camera: Camera
     private val highlight: Highlight
-    private val mapFactory : MapFactory
+    private val mapManager : MapManager
     private val buyMenu: BuyMenu
+    private val enemyManager: EnemyManager
+    private val towerManager: TowerManager
+    private val attacksManager: AttacksManager
 
-    private val towerArray = ArrayList<Tower>()
+    private val ticker: Ticker
+
+
 
     fun pause(){
         Log.d("Game.kt","pause()")
@@ -45,14 +50,29 @@ class Game(private val screenWidth: Int,screenHeight: Int,context: Context, extr
         performance = Performance(context,gameLoop)
         drawables = Drawables(context)
         player = Player(context)
-        mapFactory = MapFactory(extras.get("idMap").toString(),resources,drawables)
-        camera = Camera(screenWidth, screenHeight,mapFactory.getMapWidth(),mapFactory.getMapHeight())
+
+        mapManager = MapManager(extras.get("idMap").toString(),resources,drawables)
+
+        camera = Camera(screenWidth, screenHeight,mapManager.getMapWidth(),mapManager.getMapHeight())
+
+
+
+        enemyManager = EnemyManager(drawables, mapManager.getEnemyWayPoints())
+        enemyManager.setPlayer(player)
+
+        towerManager = TowerManager()
+        attacksManager = AttacksManager()
+
+        towerManager.setEnemyManager(enemyManager)
+        towerManager.setAttacksManager(attacksManager)
+
+        ticker = Ticker()
+
         buyMenu = BuyMenu(drawables)
+        buyMenu.setCustomer(player)
+        buyMenu.setTowerManager(towerManager)
 
-        buyMenu.addItem(TestTower(drawables))
-        buyMenu.addItem(TestTower2(drawables))
-
-        highlight = Highlight(mapFactory,drawables)
+        highlight = Highlight(mapManager,drawables)
 
     }
 
@@ -84,12 +104,13 @@ class Game(private val screenWidth: Int,screenHeight: Int,context: Context, extr
                 val realX = camera.getRealX(event.x)
                 val realY = camera.getRealY(event.y)
 
-
                 highlight.activate(realX,realY)
 
-                buyMenu.show(highlight,realX,realY,player,towerArray)
 
-                //player.buy(TestTower(drawables),towerArray,highlight)
+                buyMenu.show(highlight,realX,realY)
+
+
+                towerManager.addTowers(buyMenu.getBoughtTowers())
 
 
 
@@ -143,14 +164,16 @@ class Game(private val screenWidth: Int,screenHeight: Int,context: Context, extr
         canvas.scale(camera.getScale(),camera.getScale())
 
 
-        mapFactory.drawMap(canvas)
+        mapManager.drawMap(canvas)
 
-        for(i in 0 until towerArray.size){
-            towerArray[i].draw(canvas)
-        }
+
+        towerManager.drawTowers(canvas)
+        enemyManager.drawEnemies(canvas)
 
         buyMenu.draw(canvas)
         highlight.draw(canvas)
+
+        attacksManager.draw(canvas)
 
         canvas.restore()
 
@@ -160,7 +183,14 @@ class Game(private val screenWidth: Int,screenHeight: Int,context: Context, extr
     }
 
     fun update() {
+        ticker.update()
 
+        enemyManager.updateEnemies()
+        towerManager.updateTowers()
+
+       if(enemyManager.countEnemies()<5) enemyManager.spawnEnemy((Math.random()*9+1).toInt())
+
+        attacksManager.updateAttacks()
     }
 
 }

@@ -10,7 +10,7 @@ import java.io.InputStream
 import java.io.InputStreamReader
 
 
-class MapFactory(idMap: String, resources: Resources, private val drawables: Drawables){
+class MapManager(idMap: String, resources: Resources, private val drawables: Drawables){
     private val tileSize = 100
     private var map: Map
 
@@ -84,12 +84,15 @@ class MapFactory(idMap: String, resources: Resources, private val drawables: Dra
     fun getMapHeight(): Int{
         return tileSize*map.height
     }
-
+    fun getEnemyWayPoints(): Array<IntArray>{
+        return map.enemyWayPoints
+    }
 }
 
 
 class Map(
     var width: Int,
     var height: Int,
-    var tiles: Array<IntArray>
+    var tiles: Array<IntArray>,
+    var enemyWayPoints: Array<IntArray>
 )
