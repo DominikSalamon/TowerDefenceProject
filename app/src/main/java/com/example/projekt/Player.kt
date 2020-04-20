@@ -8,7 +8,7 @@ import androidx.core.content.ContextCompat
 class Player(private val context: Context){
     private var health = 7
     private var score = 0
-    private var money = 10000
+    var money = 10000
     private var paint: Paint = Paint()
 
     init{
@@ -19,55 +19,13 @@ class Player(private val context: Context){
 
 
     fun buy(tower: Tower, towerArray: ArrayList<Tower>, x: Int, y: Int){
-        var colision = false
-
-        for(i in 0 until towerArray.size){
-            colision = towerArray[i].colides(x,y)
-            if(colision){
-                break
-            }
-        }
-
-        if(!colision){
-            if(money>=tower.cost()){
-                money-=tower.cost()
-                tower.setPosition(x,y)
-                towerArray.add(tower)
-
-            }
-        }
-
-    }
-
-
-    fun buy(tower: Tower,towerArray: ArrayList<Tower>, highlight: Highlight){
-        val x = highlight.getX().toInt()
-        val y = highlight.getY().toInt()
-
-        var colision = false
-
-        for(i in 0 until towerArray.size){
-            colision = towerArray[i].colides(x,y)
-            if(colision){
-                highlight.setActive(false)
-                break
-            }
-        }
-
-
-
-        if(highlight.isActive()){
-            if(money>=tower.cost()){
-
-
-                money-=tower.cost()
-                tower.setPosition(x,y)
-                towerArray.add(tower)
-
-
-            }
+        if(money>=tower.cost()){
+            money-=tower.cost()
+            tower.setPosition(x,y)
+            towerArray.add(tower)
         }
     }
+
 
     fun draw(canvas: Canvas,screenWidth: Int){
 

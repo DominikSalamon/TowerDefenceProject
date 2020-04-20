@@ -4,7 +4,6 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.util.Log
-import androidx.core.content.ContextCompat
 
 
 class BuyMenu(drawables: Drawables){
@@ -18,8 +17,25 @@ class BuyMenu(drawables: Drawables){
     private var items = ArrayList<Tower>()
     private var hX = 0f
     private var hY = 0f
+    private val boughtTowers = ArrayList<Tower>()
+    private var customer: Player? = null
+    private var towerManager: TowerManager? = null
 
-    fun show(highlight: Highlight,realX: Int, realY: Int,player: Player,towerArray: ArrayList<Tower>) {
+    init{
+        addItems(arrayOf(
+            TestTower(drawables),
+            TestTower2(drawables)
+        ))
+    }
+
+    fun getBoughtTowers(): ArrayList<Tower>{
+        val toReturn = ArrayList<Tower>()
+        toReturn.addAll(boughtTowers)
+        boughtTowers.clear()
+        return toReturn
+    }
+
+    fun show(highlight: Highlight,realX: Int, realY: Int) {
         if(!isClicked(realX,realY)){
             if(highlight.doubleTapped&&highlight.isActive()) {
                 show((highlight.getX() * 100).toInt() + 50, (highlight.getY() * 100).toInt())
@@ -30,16 +46,19 @@ class BuyMenu(drawables: Drawables){
                 hide()
         }
         else{
-            for(i in 0 until items.size){
-                if(items[i].isClicked(realX-getPosX1(),realY-getPosY1())){
-                    Log.d("BuyMenu.kt","item isClicked")
-                    player.buy(items[i].copy(),towerArray,hX.toInt(),hY.toInt())
-                    break
+            if(towerManager?.isPlaceFree(hX.toInt(),hY.toInt())!!){
+                for(i in 0 until items.size){
+                    if(items[i].isClicked(realX-getPosX1(),realY-getPosY1())){
+                        Log.d("BuyMenu.kt","item isClicked")
+                        customer?.buy(items[i].copy(),boughtTowers,hX.toInt(),hY.toInt())
+                        break
+                    }
                 }
-
             }
         }
     }
+
+
 
     private fun show(X: Int, Y:Int) {
         x = X - width / 2
@@ -65,12 +84,12 @@ class BuyMenu(drawables: Drawables){
 
             for(i in 0 until items.size){
                 items[i].draw(canvas,x,y)
-                val price = items[i].cost
                 val paint = Paint()
                 paint.flags = Paint.ANTI_ALIAS_FLAG
                 paint.color = Color.BLACK
                 paint.textSize = 30f
-                canvas.drawText("$price", (x+i*100+20).toFloat(), y.toFloat()+150, paint)
+                canvas.drawText(items[i].name, (x+i*100+10).toFloat(), y.toFloat()+140, paint)
+                canvas.drawText(items[i].cost.toString(), (x+i*100+10).toFloat(), y.toFloat()+180, paint)
             }
         }
     }
@@ -103,8 +122,21 @@ class BuyMenu(drawables: Drawables){
         return y+height
     }
 
-    fun addItem(tower: Tower){
+    private fun addItem(tower: Tower){
         tower.setPosition(items.size,0)
         items.add(tower)
+    }
+
+    private fun addItems(towers: Array<Tower>){
+        for(tower in towers){
+            addItem(tower)
+        }
+    }
+
+    fun setCustomer(player: Player) {
+        customer = player
+    }
+    fun setTowerManager(manager: TowerManager) {
+        towerManager = manager
     }
 }
