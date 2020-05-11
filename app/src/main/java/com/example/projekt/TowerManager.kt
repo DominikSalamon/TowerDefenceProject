@@ -6,15 +6,10 @@ class TowerManager {
     private val towerList = ArrayList<Tower>()
     private lateinit var enemyManager: EnemyManager
     private lateinit var attacksManager: AttacksManager
-    private lateinit var ticker: Ticker
 
     fun updateTowers() {
-        for(tower in towerList){
-
+        for(tower in towerList)
             tower.update(enemyManager.getEnemyList(),attacksManager)
-
-        }
-
     }
 
     fun setAttacksManager(manager: AttacksManager){
@@ -25,10 +20,6 @@ class TowerManager {
         enemyManager = manager
     }
 
-    fun setTicker(ticker: Ticker){
-        this.ticker = ticker
-    }
-
     fun drawTowers(canvas: Canvas) {
         for(i in 0 until towerList.size){
             towerList[i].draw(canvas)
@@ -37,7 +28,7 @@ class TowerManager {
 
     fun isPlaceFree(X: Int, Y:Int): Boolean{
         towerList.forEach{
-            if(it.colides(X,Y)){
+            if(it.collides(X,Y)){
                 return false
             }
         }

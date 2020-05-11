@@ -3,8 +3,6 @@ package com.example.projekt
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
-import android.util.Log
-
 
 class BuyMenu(drawables: Drawables){
     private var drawable = drawables.buyMenu
@@ -49,8 +47,7 @@ class BuyMenu(drawables: Drawables){
             if(towerManager?.isPlaceFree(hX.toInt(),hY.toInt())!!){
                 for(i in 0 until items.size){
                     if(items[i].isClicked(realX-getPosX1(),realY-getPosY1())){
-                        Log.d("BuyMenu.kt","item isClicked")
-                        customer?.buy(items[i].copy(),boughtTowers,hX.toInt(),hY.toInt())
+                        customer?.buy(items[i].getClone(),boughtTowers,hX.toInt(),hY.toInt())
                         break
                     }
                 }

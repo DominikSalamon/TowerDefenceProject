@@ -2,12 +2,12 @@ package com.example.projekt
 
 
 
-class Camera(private var screenWidth: Int, private var screenHeight: Int, private var boardWidth: Int, private var boardHeight: Int){
+class Camera(private var screenWidth: Int, private var screenHeight: Int, private val mapManager: MapManager){
 
-    private var limit = 200f
+    private var limit = 300f
     private var scale = 1f
-    private val scaleMax = 3f
-    private val scaleMin= 0.5f
+    private val scaleMax = 2f
+    private val scaleMin= 0.6f
 
     private var x = 0f
     private var y = 0f
@@ -32,8 +32,8 @@ class Camera(private var screenWidth: Int, private var screenHeight: Int, privat
         x=X-startX
         y=Y-startY
 
-        val boardWidthScale=(boardWidth*scale).toInt()
-        val boardHeightScale=(boardHeight*scale).toInt()
+        val boardWidthScale=(mapManager.getMapWidth()*scale).toInt()
+        val boardHeightScale=(mapManager.getMapHeight()*scale).toInt()
 
         val difX = boardWidthScale-screenWidth
         val difY = boardHeightScale-screenHeight

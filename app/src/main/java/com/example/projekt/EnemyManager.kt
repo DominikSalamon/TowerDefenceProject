@@ -3,9 +3,9 @@ package com.example.projekt
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
-import android.util.Log
 
-class EnemyManager(private val drawables: Drawables, private val wayPoints:  Array<IntArray>){
+
+class EnemyManager(private val drawables: Drawables, private val wayPoints:  Array<IntArray>,private val tileSize: Int){
     private val enemyList = ArrayList<Enemy>()
     private lateinit var player: Player
     fun setPlayer(player: Player){
@@ -19,10 +19,10 @@ class EnemyManager(private val drawables: Drawables, private val wayPoints:  Arr
         val targetY = wayPoints[1][1]
 
 
-        val enemy = Enemy(drawables)
+        val enemy = Enemy(drawables,tileSize)
 
-        enemy.setPosition(x*100,y*100)
-        enemy.setTarget(targetX*100,targetY*100)
+        enemy.setPosition(x*tileSize,y*tileSize)
+        enemy.setTarget(targetX*tileSize,targetY*tileSize)
         enemy.step = a
 
         enemyList.add(enemy)
@@ -53,11 +53,14 @@ class EnemyManager(private val drawables: Drawables, private val wayPoints:  Arr
 
                         val targetX = wayPoints[enemy.targetIndex][0]
                         val targetY = wayPoints[enemy.targetIndex][1]
-                        enemy.setTarget(targetX*100,targetY*100)
+                        enemy.setTarget(targetX*tileSize,targetY*tileSize)
 
 
                     }
-                    else toDelete.add(enemy)
+                    else {
+                        player.money-=100
+                        toDelete.add(enemy)
+                    }
 
                 }
 
@@ -83,7 +86,7 @@ class EnemyManager(private val drawables: Drawables, private val wayPoints:  Arr
     }
 }
 
-class Enemy(drawables: Drawables){
+class Enemy(drawables: Drawables,private val tileSize: Int){
     val  drawable = drawables.enemy
     private var x = 0
     private var y = 0
@@ -107,7 +110,7 @@ class Enemy(drawables: Drawables){
     }
 
     fun draw(canvas: Canvas){
-        drawable?.setBounds(x,y,x+100,y+100)
+        drawable?.setBounds(x, y,x+tileSize,y+tileSize)
         drawable?.draw(canvas)
 
         paint.strokeWidth = 5F
@@ -130,7 +133,7 @@ class Enemy(drawables: Drawables){
         else
             x--
 
-        if(vY>0)
+        if(vY>=0)
             y++
         else
             y--

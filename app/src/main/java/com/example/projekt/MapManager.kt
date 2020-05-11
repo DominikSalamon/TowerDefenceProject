@@ -10,8 +10,7 @@ import java.io.InputStream
 import java.io.InputStreamReader
 
 
-class MapManager(idMap: String, resources: Resources, private val drawables: Drawables){
-    private val tileSize = 100
+class MapManager(idMap: String, resources: Resources, private val drawables: Drawables,private val tileSize: Int){
     private var map: Map
 
     init{
@@ -27,10 +26,11 @@ class MapManager(idMap: String, resources: Resources, private val drawables: Dra
         map = Gson().fromJson(mapString, Map::class.java)
     }
 
+
+
     fun drawMap(canvas: Canvas) {
         for (i in 0 until map.height) {
             for (j in 0 until map.width) {
-
                 val drawable = getDrawable(map.tiles[i][j], drawables)
                 drawable?.setBounds(
                     j * tileSize,
@@ -39,7 +39,6 @@ class MapManager(idMap: String, resources: Resources, private val drawables: Dra
                     (i + 1) * tileSize
                 )
                 drawable?.draw(canvas)
-
             }
         }
     }
@@ -67,7 +66,7 @@ class MapManager(idMap: String, resources: Resources, private val drawables: Dra
             1 -> drawables.tileRoad
             2 -> drawables.trees
             3 -> drawables.mountain
-            else -> drawables.tileGrass
+            else -> null
         }
     }
 

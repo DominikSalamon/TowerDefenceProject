@@ -688,6 +688,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable bullet
 drawable buy_menu
 drawable buy_menu2
 drawable enemy
@@ -720,6 +721,7 @@ drawable tower3
 drawable tower_test
 drawable tower_test2
 drawable tower_test3
+drawable towertop
 drawable treees
 id ALT
 id CTRL

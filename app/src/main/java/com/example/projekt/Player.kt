@@ -5,10 +5,8 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import androidx.core.content.ContextCompat
 
-class Player(private val context: Context){
-    private var health = 7
-    private var score = 0
-    var money = 10000
+class Player(private val context: Context,private val screenWidth: Int){
+    var money = 1000
     private var paint: Paint = Paint()
 
     init{
@@ -27,7 +25,7 @@ class Player(private val context: Context){
     }
 
 
-    fun draw(canvas: Canvas,screenWidth: Int){
+    fun draw(canvas: Canvas){
 
         val text = money.toString()
 

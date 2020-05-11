@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.appcompat.content.res.AppCompatResources
 
 class Drawables(context: Context){
+    val towerTop = AppCompatResources.getDrawable(context, R.drawable.towertop)
+    val bullet = AppCompatResources.getDrawable(context, R.drawable.bullet)
     val enemy = AppCompatResources.getDrawable(context, R.drawable.enemy)
     val buyMenu2 = AppCompatResources.getDrawable(context, R.drawable.buy_menu2)
     val tower1 = AppCompatResources.getDrawable(context, R.drawable.tower1)

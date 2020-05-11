@@ -7,7 +7,7 @@ import androidx.core.content.ContextCompat
 
 class Performance(context: Context,private var gameLoop: GameLoop){
     private var paint: Paint = Paint()
-
+    var visible = true
     init{
         paint.flags = Paint.ANTI_ALIAS_FLAG
         paint.color = ContextCompat.getColor(context, R.color.colorDark)
@@ -15,8 +15,10 @@ class Performance(context: Context,private var gameLoop: GameLoop){
     }
 
     fun draw(canvas: Canvas){
-        drawUPS(canvas)
-        drawFPS(canvas)
+        if(visible){
+            drawUPS(canvas)
+            drawFPS(canvas)
+        }
     }
 
     private fun drawUPS(canvas: Canvas) {

@@ -90,7 +90,7 @@ class GameLoop(private val game: Game, private val surfaceHolder: SurfaceHolder)
     }
 
     companion object {
-        private const val MAX_UPS = 120.0
+        private const val MAX_UPS = 60.0
         private const val UPS_PERIOD = 1E+3 / MAX_UPS
     }
 

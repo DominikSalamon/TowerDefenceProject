@@ -2,52 +2,47 @@ package com.example.projekt
 
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
-import android.util.Log
+import kotlin.math.PI
+import kotlin.math.atan2
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-open class Tower{
-    var name = "Tower"
-    private var x = 0
-    private var y = 0
-    var cost = 0
-    var drawable: Drawable? = null
-    var animatedDrawable: AnimatedDrawable? = null
-    var attackRadius = 150
-    private var attackInterval = 500// in millis
-    private lateinit var attack: Laser
-    private var ticker = Ticker()
-    private var target: Enemy? = null
+abstract class Tower{
+    private val tileSize: Int = 100
+    private var x: Int = 0
+    private var y: Int = 0
 
-    private var reload = ticker.newTick(attackInterval)
-    private var nextFrame = ticker.newTick(1000)
+    abstract var animatedDrawable: AnimatedDrawable
 
+    abstract var name: String
+    abstract var cost: Int
+    abstract var radius: Int
+    abstract var interval: Int
 
-    fun update(enemyList: ArrayList<Enemy>, attacksManager: AttacksManager){
+    protected var ticker = Ticker()
+    abstract var reload: Tick
+
+    var target: Enemy? = null
+
+    open fun update(enemyList: ArrayList<Enemy>, attacksManager: AttacksManager){
         ticker.update()
-
-        if(nextFrame.get()) animatedDrawable?.update()
+        animatedDrawable.update()
 
         target=null
-
         findEnemy(enemyList)
 
-        if(attack())
-            attacksManager.addAttack(attack)
-    }
-
-    private fun attack(): Boolean{
         if(target!=null){
             if(reload.get()) {
-                attack = Laser()
+                val attack = getAttack()
                 attack.setSides(this, target!!)
-
-                return true
+                attacksManager.addAttack(attack)
             }
         }
 
-        return false
+
     }
+
+    abstract fun getAttack(): Attack
 
     fun getX(): Int{
         return x
@@ -56,57 +51,44 @@ open class Tower{
     fun getY(): Int{
         return y
     }
-
-    fun draw(canvas: Canvas){
-        drawable = animatedDrawable?.getDrawable()
-        drawable?.setBounds(x*100,y*100,x*100+100,y*100+100)
-        drawable?.draw(canvas)
-
+    open fun draw(canvas: Canvas){
+        animatedDrawable.getDrawable().setBounds(x,y,x+tileSize,y+tileSize)
+        animatedDrawable.getDrawable().draw(canvas)
     }
 
     fun draw(canvas: Canvas,X: Int,Y:Int){
-        drawable = animatedDrawable?.getDrawable()
-        drawable?.setBounds(x*100+X,y*100+Y,x*100+100+X,y*100+100+Y)
-        drawable?.draw(canvas)
+        animatedDrawable.getDrawable().setBounds(x+X,y+Y,x+tileSize+X,y+tileSize+Y)
+        animatedDrawable.getDrawable().draw(canvas)
     }
 
     fun isClicked(X: Int,Y: Int): Boolean{
-        Log.d("Buymenu.kt","$x $y")
-        return  X>=x*100&&
-                X<=x*100+100&&
-                Y>=y*100&&
-                Y<=y*100+100
+        return  X>=x&&
+                X<=x+tileSize&&
+                Y>=y&&
+                Y<=y+tileSize
 
     }
 
     fun setPosition(X: Int, Y:Int){
-        x = X
-        y = Y
+        x = X*tileSize
+        y = Y*tileSize
     }
 
     fun cost(): Int{
         return cost
     }
 
-    fun colides(X: Int, Y: Int): Boolean {
+    fun collides(X: Int, Y: Int): Boolean {
         return x==X&&y==Y
     }
 
-    fun copyContent(tower: Tower){
-        name = tower.name
-        drawable = tower.drawable
-        cost = tower.cost
-        attackRadius = tower.attackRadius
-        animatedDrawable = tower.animatedDrawable
-    }
-
-    open fun copy(): Tower{
-        return Tower()
+    open fun getClone(): Tower{
+        return this
     }
 
     private fun findEnemy(enemyList: ArrayList<Enemy>){
         enemyList.forEach{
-            if(distance(it)<=attackRadius){
+            if(distance(it)<=radius){
                 target = it
                 return
             }
@@ -114,57 +96,83 @@ open class Tower{
     }
 
     private fun distance(enemy: Enemy): Float {
-        return sqrt((enemy.getX()-x*100 ).toFloat().pow(2)+(enemy.getY() - y*100 ).toFloat().pow(2))
+        return sqrt((enemy.getX()-x ).toFloat().pow(2)+(enemy.getY() - y ).toFloat().pow(2))
     }
 }
 
 
 
-class TestTower : Tower {
-    constructor(tower: Tower): super(){
-       copyContent(tower)
+class TestTower(private val drawables: Drawables) : Tower() {
+    override var name = "Tower1"
+    override var cost = 100
+    override var radius = 300
+    override var interval = 100
+    override var animatedDrawable = AnimatedDrawable(arrayOf(
+        drawables.towerTest,
+        drawables.towerTest2,
+        drawables.towerTest3
+    ))
+
+    override var reload = ticker.newTick(interval)
+
+    override fun getAttack(): Attack {
+        return Laser()
     }
 
-    constructor(drawables: Drawables): super(){
-        name = "Tower1"
-        drawable = drawables.towerTest
-        cost = 100
-        attackRadius = 200
-        animatedDrawable = AnimatedDrawable(arrayOf(
-            drawables.towerTest,
-            drawables.towerTest2,
-            drawables.towerTest3
-        ))
+    override fun getClone(): TestTower{
+        return TestTower(drawables)
     }
-
-    override fun copy(): TestTower{
-        return TestTower(this)
-    }
-
 
 }
 
-class TestTower2 : Tower {
-    constructor(tower: Tower): super(){
-        copyContent(tower)
+class TestTower2(private val drawables: Drawables) : Tower() {
+    override var name =  "Tower2"
+    override var cost = 500
+    override var radius = 200
+    override var interval = 500
+    override var animatedDrawable = AnimatedDrawable(arrayOf(
+        drawables.tower1,
+        drawables.tower2,
+        drawables.tower3
+    ))
+
+    private var topDrawable = drawables.towerTop
+    private var topAngle = 0f
+
+    override var reload = ticker.newTick(interval)
+
+    private fun calcAngle(): Float{
+        if(target!=null){
+            return (atan2(target!!.getY() - getY().toFloat(), target!!.getX() - getX().toFloat()) * 180 / PI).toFloat()
+        }
+        return 0f
     }
 
-    constructor(drawables: Drawables): super(){
-        name = "Tower2"
-        drawable = drawables.towerTest2
-        cost = 500
-        attackRadius = 100
-        animatedDrawable = AnimatedDrawable(arrayOf(
-            drawables.tower1,
-            drawables.tower2,
-            drawables.tower3
-        ))
+    override fun getAttack(): Attack {
+       return Bullet(drawables,topAngle)
     }
 
-    override fun copy(): TestTower2{
-        return TestTower2(this)
+    override fun update(enemyList: ArrayList<Enemy>, attacksManager: AttacksManager){
+        super.update(enemyList, attacksManager)
+
+        if(target!=null) topAngle = calcAngle()
+
     }
 
+    override fun draw(canvas: Canvas){
+        super.draw(canvas)
+
+        canvas.save()
+        canvas.rotate(topAngle+90, getX().toFloat()+50, getY().toFloat()+50)
+        topDrawable?.setBounds(getX(),getY(),getX()+100,getY()+100)
+        topDrawable?.draw(canvas)
+        canvas.restore()
+
+    }
+
+    override fun getClone(): TestTower2{
+        return TestTower2(drawables)
+    }
 
 }
 
