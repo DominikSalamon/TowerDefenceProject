@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_menu_play.*
+import kotlinx.android.synthetic.main.fragment_menu_play.button_back
+import kotlinx.android.synthetic.main.fragment_menu_settings.*
 
 /**
  * A simple [Fragment] subclass.
@@ -22,8 +24,15 @@ class MenuPlay : Fragment() {
     }
 
     private var idMap = 1
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        button_back.setOnClickListener {
+            val fragmentTransaction = fragmentManager?.beginTransaction()
+            fragmentTransaction?.setCustomAnimations(R.anim.fade_out, R.anim.fade_in)
+            fragmentTransaction?.replace(R.id.fragment_container, MenuHome())?.commit()
+        }
 
         button_mapa1.setOnClickListener{
             idMap = 1

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\pawli\\Desktop\\TowerDefenceProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ky\\values-ky.xml",
+            "outputFile": "C:\\Users\\pawli\\Desktop\\TowerDefenceProject43\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ky\\values-ky.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pawli\\.gradle\\caches\\transforms-2\\files-2.1\\11f8649682ddda2b97dfe7813b453516\\appcompat-1.1.0\\res\\values-ky\\values-ky.xml",
+                    "source": "C:\\Users\\pawli\\.gradle\\caches\\transforms-2\\files-2.1\\4bb5caef9eef36aae4234b75a640f092\\appcompat-1.1.0\\res\\values-ky\\values-ky.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pawli\\.gradle\\caches\\transforms-2\\files-2.1\\5d0bda9c1c1ed753beba57e81d163ac5\\core-1.2.0\\res\\values-ky\\values-ky.xml",
+                    "source": "C:\\Users\\pawli\\.gradle\\caches\\transforms-2\\files-2.1\\1fb33a90cf35921d687ff1450d55e15f\\core-1.2.0\\res\\values-ky\\values-ky.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
