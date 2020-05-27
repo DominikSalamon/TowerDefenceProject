@@ -64,8 +64,13 @@ class MapManager(idMap: String, resources: Resources, private val drawables: Dra
         return when(i){
             0 -> drawables.tileGrass
             1 -> drawables.tileRoad
-            2 -> drawables.trees
-            3 -> drawables.mountain
+            2 -> drawables.tileRoad2
+            3 -> drawables.turnRight1
+            4 -> drawables.turnRight2
+            5 -> drawables.turnLeft1
+            6 -> drawables.turnLeft2
+            7 -> drawables.trees
+            8 -> drawables.mountain
             else -> null
         }
     }

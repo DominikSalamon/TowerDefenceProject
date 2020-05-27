@@ -8,7 +8,7 @@ import kotlin.math.pow
 import kotlin.math.sqrt
 
 abstract class Tower{
-    private val tileSize: Int = 100
+    private val tileSize: Int = 150
     private var x: Int = 0
     private var y: Int = 0
 

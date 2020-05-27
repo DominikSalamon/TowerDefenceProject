@@ -4,7 +4,7 @@ import android.graphics.drawable.Drawable
 
 class AnimatedDrawable(arr: Array<Drawable?>){
     private var ticker = Ticker()
-    private var nextFrame = ticker.newTick(1000)
+    private var nextFrame = ticker.newTick(700)
     private var array = ArrayList<Drawable>()
     private var currentIndex = 0
 

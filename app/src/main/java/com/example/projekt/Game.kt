@@ -21,7 +21,7 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
         SurfaceHolder.Callback {
     private var gameLoop: GameLoop
 
-    private val tileSize = 100
+    private val tileSize = 150
     private var performance: Performance
     private val drawables: Drawables
     private val player: Player
