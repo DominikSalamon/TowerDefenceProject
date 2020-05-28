@@ -132,8 +132,7 @@ class TestTower2(private val drawables: Drawables) : Tower() {
     override var interval = 500
     override var animatedDrawable = AnimatedDrawable(arrayOf(
         drawables.tower1,
-        drawables.tower2,
-        drawables.tower3
+        drawables.tower2
     ))
 
     private var topDrawable = drawables.towerTop

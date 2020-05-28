@@ -694,6 +694,7 @@ drawable buy_menu2
 drawable custom_button
 drawable custom_button2
 drawable enemy
+drawable enemy1
 drawable gradient_color
 drawable highlight
 drawable highlight_red
