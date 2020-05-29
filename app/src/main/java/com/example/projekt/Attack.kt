@@ -62,20 +62,31 @@ class Bullet(drawables: Drawables, private var angle:Float): Attack() {
     private val drawable = drawables.bullet
     private var posX = 0
     private var posY = 0
+    private var tarX = 0
+    private var tarY = 0
 
     override var damage = 30
-    private var speed = 10
-    private var vX = 0f
-    private var vY = 0f
+    private var speed = 20
+
     private var t = true
 
     private fun move(){
 
-        vX=cos(angle)*speed
-        vY=sin(angle)*speed
 
-        posX+=vX.toInt()
-        posY+=vY.toInt()
+        val a = posX-tarX
+        val b = posY-tarY
+
+        val c = abs(a) + abs(b)
+
+        posX-=speed*a/c
+        posY-=speed*b/c
+
+
+
+        if(abs(b)<50&&abs(a)<50) {
+            target.health-=damage
+            ongoing = false
+        }
 
     }
     override fun update(){
@@ -84,16 +95,27 @@ class Bullet(drawables: Drawables, private var angle:Float): Attack() {
         if(t){
             posX = attacker.getX()
             posY = attacker.getY()
+            tarX = target.getX()
+            tarY = target.getY()
 
             t=false
         }
 
         move()
+
+
     }
     override fun draw(canvas: Canvas){
         super.draw(canvas)
-        drawable?.setBounds(posX,posY,posX+10,posY+30)
+
+        canvas.save()
+
+        canvas.rotate(angle+90, posX+10f, posY+25f)
+
+        drawable?.setBounds(70+posX,posY,70+posX+20,70+posY+50)
         drawable?.draw(canvas)
+
+        canvas.restore()
 
     }
 }

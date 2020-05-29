@@ -4,7 +4,7 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 
-class BuyMenu(drawables: Drawables){
+class BuyMenu(drawables: Drawables,private var tileSize:Int){
     private var drawable = drawables.buyMenu
     private var drawable2 = drawables.buyMenu2
     private var x = 0
@@ -16,8 +16,8 @@ class BuyMenu(drawables: Drawables){
     private var hX = 0f
     private var hY = 0f
     private val boughtTowers = ArrayList<Tower>()
-    private var customer: Player? = null
-    private var towerManager: TowerManager? = null
+    private lateinit var customer: Player
+    private lateinit var towerManager: TowerManager
 
     init{
         addItems(arrayOf(
@@ -36,7 +36,7 @@ class BuyMenu(drawables: Drawables){
     fun show(highlight: Highlight,realX: Int, realY: Int) {
         if(!isClicked(realX,realY)){
             if(highlight.doubleTapped&&highlight.isActive()) {
-                show((highlight.getX() * 100).toInt() + 50, (highlight.getY() * 100).toInt())
+                show((highlight.getX() * tileSize).toInt() + 75, (highlight.getY() * tileSize).toInt())
                 hX=highlight.getX()
                 hY=highlight.getY()
             }
@@ -44,10 +44,10 @@ class BuyMenu(drawables: Drawables){
                 hide()
         }
         else{
-            if(towerManager?.isPlaceFree(hX.toInt(),hY.toInt())!!){
+            if(towerManager.isPlaceFree(hX.toInt()*tileSize,hY.toInt()*tileSize)){
                 for(i in 0 until items.size){
                     if(items[i].isClicked(realX-getPosX1(),realY-getPosY1())){
-                        customer?.buy(items[i].getClone(),boughtTowers,hX.toInt(),hY.toInt())
+                        customer.buy(items[i].getClone(),boughtTowers,hX.toInt(),hY.toInt())
                         break
                     }
                 }
@@ -85,8 +85,8 @@ class BuyMenu(drawables: Drawables){
                 paint.flags = Paint.ANTI_ALIAS_FLAG
                 paint.color = Color.BLACK
                 paint.textSize = 30f
-                canvas.drawText(items[i].name, (x+i*100+10).toFloat(), y.toFloat()+140, paint)
-                canvas.drawText(items[i].cost.toString(), (x+i*100+10).toFloat(), y.toFloat()+180, paint)
+                canvas.drawText(items[i].name, (x+i*tileSize+10).toFloat(), y.toFloat()+240, paint)
+                canvas.drawText(items[i].cost.toString(), (x+i*tileSize+10).toFloat(), y.toFloat()+260, paint)
             }
         }
     }

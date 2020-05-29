@@ -7,7 +7,7 @@ class Camera(private var screenWidth: Int, private var screenHeight: Int, privat
     private var limit = 300f
     private var scale = 1f
     private val scaleMax = 2f
-    private val scaleMin= 0.6f
+    private val scaleMin= 0.2f
 
     private var x = 0f
     private var y = 0f

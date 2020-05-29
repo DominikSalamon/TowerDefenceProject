@@ -2,6 +2,7 @@ package com.example.projekt
 
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
+import android.util.Log
 import kotlin.math.PI
 import kotlin.math.atan2
 import kotlin.math.pow

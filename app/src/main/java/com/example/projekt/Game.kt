@@ -4,7 +4,9 @@ package com.example.projekt
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Canvas
+import android.graphics.Color
 import android.graphics.Paint
+
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -13,17 +15,21 @@ import android.view.ScaleGestureDetector
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import androidx.annotation.RequiresApi
-import kotlin.math.*
+
+
+
+
+
+lateinit var drawables: Drawables
 
 @RequiresApi(Build.VERSION_CODES.O)
 @SuppressLint("ViewConstructor")
-class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) : SurfaceView(context),
+class Game(private val screenWidth: Int, private val screenHeight: Int, context: Context, extras: Bundle) : SurfaceView(context),
         SurfaceHolder.Callback {
     private var gameLoop: GameLoop
 
     private val tileSize = 150
     private var performance: Performance
-    private val drawables: Drawables
     private val player: Player
     private val camera: Camera
     private val highlight: Highlight
@@ -33,8 +39,7 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
     private val towerManager: TowerManager
     private val attacksManager: AttacksManager
     private val ticker: Ticker
-
-
+    private var gameover = false
 
     fun pause(){
         gameLoop.stopLoop()
@@ -55,7 +60,7 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
         ticker = Ticker()
 
         drawables = Drawables(context)
-        buyMenu = BuyMenu(drawables)
+        buyMenu = BuyMenu(drawables,tileSize)
         player = Player(context,screenWidth)
 
         mapManager = MapManager(extras.get("idMap").toString(),resources,drawables,tileSize)
@@ -155,28 +160,43 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
     override fun draw(canvas: Canvas) {
         super.draw(canvas)
 
-        canvas.save()
+            canvas.save()
 
-        canvas.drawRGB(240,240,240)
-        canvas.translate(camera.getX(),camera.getY())
-        canvas.scale(camera.getScale(),camera.getScale())
+            canvas.drawRGB(240, 240, 240)
+            canvas.translate(camera.getX(), camera.getY())
+            canvas.scale(camera.getScale(), camera.getScale())
 
-        mapManager.drawMap(canvas)
+            mapManager.drawMap(canvas)
 
-        towerManager.drawTowers(canvas)
-        enemyManager.drawEnemies(canvas)
+            towerManager.drawTowers(canvas)
+            enemyManager.drawEnemies(canvas)
 
-        buyMenu.draw(canvas)
-        highlight.draw(canvas)
+            buyMenu.draw(canvas)
+            highlight.draw(canvas)
 
-        attacksManager.draw(canvas)
+            attacksManager.draw(canvas)
 
-        canvas.restore()
+            canvas.restore()
 
-        player.draw(canvas)
-        performance.draw(canvas)
+            player.draw(canvas)
+            performance.draw(canvas)
+
+        if(gameover) {
 
 
+
+            val drawable = drawables.gameover
+            drawable?.setBounds(screenWidth/2-300,screenHeight/2-300,screenWidth/2+300,screenHeight/2+300)
+            drawable?.draw(canvas)
+
+            val paint = Paint()
+            paint.flags = Paint.ANTI_ALIAS_FLAG
+            paint.color = Color.BLACK
+            paint.textSize = 30f
+            canvas.drawText("GAMEOVER", screenWidth/2-100f, screenHeight/2f, paint)
+
+
+        }
 
 
 
@@ -188,14 +208,24 @@ class Game(screenWidth: Int,screenHeight: Int,context: Context, extras: Bundle) 
     }
 
     fun update() {
-        ticker.update()
+            if(!gameover){
+                ticker.update()
 
 
-        towerManager.updateTowers()
-        enemyManager.updateEnemies()
-        attacksManager.updateAttacks()
+                towerManager.updateTowers()
+                enemyManager.updateEnemies()
+                attacksManager.updateAttacks()
 
-        if(enemyManager.countEnemies()<=3) enemyManager.spawnEnemy((Math.random()*5+2).toInt())
+                if(enemyManager.countEnemies()<=3) enemyManager.spawnEnemy((Math.random()*3+2).toInt())
+
+                if(player.money<=0) {
+                    gameover=true
+                }
+            }
+
+
+
+
 
 
 
