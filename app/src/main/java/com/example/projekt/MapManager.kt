@@ -71,6 +71,8 @@ class MapManager(idMap: String, resources: Resources, private val drawables: Dra
             6 -> drawables.turnLeft2
             7 -> drawables.trees
             8 -> drawables.mountain
+            9 -> drawables.crossroadL
+            10 -> drawables.crossroadR
             else -> null
         }
     }

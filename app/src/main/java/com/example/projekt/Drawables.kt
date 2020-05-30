@@ -19,6 +19,8 @@ class Drawables(context: Context){
     val turnRight2 = AppCompatResources.getDrawable(context, R.drawable.turn_right_up)
     val turnLeft1 = AppCompatResources.getDrawable(context, R.drawable.turn_left_down)
     val turnLeft2 = AppCompatResources.getDrawable(context, R.drawable.turn_left_up)
+    val crossroadL = AppCompatResources.getDrawable(context, R.drawable.crossroad_left)
+    val crossroadR = AppCompatResources.getDrawable(context, R.drawable.crossroad_right)
     val tileGrass = AppCompatResources.getDrawable(context, R.drawable.tile_grass)
     val trees = AppCompatResources.getDrawable(context, R.drawable.trees)
     val mountain = AppCompatResources.getDrawable(context, R.drawable.tile_mountain)
