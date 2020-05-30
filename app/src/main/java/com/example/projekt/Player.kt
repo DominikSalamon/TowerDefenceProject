@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat
 
 class Player(private val context: Context,private val screenWidth: Int){
     var money = 1000
+    var health = 100
     private var paint: Paint = Paint()
 
     init{

@@ -185,7 +185,7 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
 
 
 
-            val drawable = drawables.gameover
+            val drawable = drawables.gameOver
             drawable?.setBounds(screenWidth/2-300,screenHeight/2-300,screenWidth/2+300,screenHeight/2+300)
             drawable?.draw(canvas)
 
@@ -218,7 +218,7 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
 
                 if(enemyManager.countEnemies()<=3) enemyManager.spawnEnemy((Math.random()*3+2).toInt())
 
-                if(player.money<=0) {
+                if(player.health<=0) {
                     gameover=true
                 }
             }

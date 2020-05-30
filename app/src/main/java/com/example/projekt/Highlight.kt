@@ -6,7 +6,7 @@ import kotlin.math.floor
 
 class Highlight(private val mapManager: MapManager, drawables: Drawables,private val tileSize: Int){
     private var drawableG = drawables.highlight
-    private var drawableR = drawables.highlight_red
+    private var drawableR = drawables.highlightRed
     private var x = 0f
     private var y = 0f
     private var active = false

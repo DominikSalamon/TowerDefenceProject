@@ -21,8 +21,9 @@ class BuyMenu(drawables: Drawables,private var tileSize:Int){
 
     init{
         addItems(arrayOf(
-            TestTower(drawables),
-            TestTower2(drawables)
+            MagicTower(drawables),
+            ArcherTower(drawables),
+            VulcanTower(drawables)
         ))
     }
 

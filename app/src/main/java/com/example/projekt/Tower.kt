@@ -1,8 +1,6 @@
 package com.example.projekt
 
 import android.graphics.Canvas
-import android.graphics.drawable.Drawable
-import android.util.Log
 import kotlin.math.PI
 import kotlin.math.atan2
 import kotlin.math.pow
@@ -103,15 +101,15 @@ abstract class Tower{
 
 
 
-class TestTower(private val drawables: Drawables) : Tower() {
-    override var name = "Tower1"
-    override var cost = 100
-    override var radius = 300
-    override var interval = 100
+class MagicTower(private val drawables: Drawables) : Tower() {
+    override var name = "Magic Tower"
+    override var cost = 300
+    override var radius = 200
+    override var interval = 150
     override var animatedDrawable = AnimatedDrawable(arrayOf(
-        drawables.towerTest,
-        drawables.towerTest2,
-        drawables.towerTest3
+        drawables.magicTower1,
+        drawables.magicTower2,
+        drawables.magicTower3
     ))
 
     override var reload = ticker.newTick(interval)
@@ -120,20 +118,19 @@ class TestTower(private val drawables: Drawables) : Tower() {
         return Laser()
     }
 
-    override fun getClone(): TestTower{
-        return TestTower(drawables)
+    override fun getClone(): MagicTower{
+        return MagicTower(drawables)
     }
 
 }
 
-class TestTower2(private val drawables: Drawables) : Tower() {
-    override var name =  "Tower2"
-    override var cost = 500
-    override var radius = 200
-    override var interval = 500
+class ArcherTower(private val drawables: Drawables) : Tower() {
+    override var name =  "Archer Tower"
+    override var cost = 400
+    override var radius = 300
+    override var interval = 300
     override var animatedDrawable = AnimatedDrawable(arrayOf(
-        drawables.tower1,
-        drawables.tower2
+        drawables.archerTower1
     ))
 
     private var topDrawable = drawables.towerTop
@@ -170,9 +167,62 @@ class TestTower2(private val drawables: Drawables) : Tower() {
 
     }
 
-    override fun getClone(): TestTower2{
-        return TestTower2(drawables)
+    override fun getClone(): ArcherTower{
+        return ArcherTower(drawables)
     }
 
 }
+
+
+class VulcanTower(private val drawables: Drawables) : Tower() {
+    override var name =  "Vulcan Tower"
+    override var cost = 500
+    override var radius = 100
+    override var interval = 500
+    override var animatedDrawable = AnimatedDrawable(arrayOf(
+        drawables.vulcanTower1,
+        drawables.vulcanTower2
+    ))
+
+    private var topDrawable = drawables.towerTop
+    private var topAngle = 0f
+
+    override var reload = ticker.newTick(interval)
+
+    private fun calcAngle(): Float{
+        if(target!=null){
+            return (atan2(target!!.getY() - getY().toFloat(), target!!.getX() - getX().toFloat()) * 180 / PI).toFloat()
+        }
+        return 0f
+    }
+
+    override fun getAttack(): Attack {
+        return Bullet(drawables,topAngle)
+    }
+
+    override fun update(enemyList: ArrayList<Enemy>, attacksManager: AttacksManager){
+        super.update(enemyList, attacksManager)
+
+        if(target!=null) topAngle = calcAngle()
+
+    }
+
+    override fun draw(canvas: Canvas){
+        super.draw(canvas)
+
+        canvas.save()
+        canvas.rotate(topAngle+90, getX().toFloat()+50, getY().toFloat()+50)
+        topDrawable?.setBounds(getX(),getY(),getX()+100,getY()+100)
+        topDrawable?.draw(canvas)
+        canvas.restore()
+
+    }
+
+    override fun getClone(): VulcanTower{
+        return VulcanTower(drawables)
+    }
+
+}
+
+
 
