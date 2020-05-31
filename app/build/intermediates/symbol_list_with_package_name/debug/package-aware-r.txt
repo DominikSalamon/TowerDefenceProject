@@ -680,6 +680,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable archer_tower1
+drawable arrow
 drawable base
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -741,6 +742,8 @@ drawable turn_right_up
 drawable vertical_tile
 drawable vulcan_tower1
 drawable vulcan_tower2
+drawable zoom_in
+drawable zoom_out
 id ALT
 id CTRL
 id FUNCTION

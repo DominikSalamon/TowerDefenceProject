@@ -1,266 +1,278 @@
 [
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\raw_map1.json.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\raw\\map1.json"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\raw_map3.json.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\raw\\map3.json"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_play_pressed.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\play_pressed.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_magic_tower3.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\magic_tower3.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_buy_menu2.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\buy_menu2.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gameover.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\gameover.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_turn_right_up.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\turn_right_up.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_out.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\fade_out.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tlo2.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\tlo2.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_magic_tower1.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\magic_tower1.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_left.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\slide_in_left.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_base.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\base.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_archer_tower1.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\archer_tower1.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_menu_play.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\layout\\fragment_menu_play.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_turn_left_up.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\turn_left_up.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_in.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\fade_in.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_crossroad_left.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\crossroad_left.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_play_default.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\play_default.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_crossroad_right.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\crossroad_right.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_turn_right_up.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\turn_right_up.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_turn_left_down.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\turn_left_down.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_buy_menu.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\buy_menu.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_custom_button.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\custom_button.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_color.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\gradient_color.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_menu_settings.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\layout\\fragment_menu_settings.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_map_button_pressed.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\map_button_pressed.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_out.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\fade_out.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_map_button.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\map_button.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tile_road.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\tile_road.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bullet.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\bullet.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_turn_left_up.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\turn_left_up.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_vertical_tile.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\vertical_tile.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_towertop.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\towertop.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_vulcan_tower2.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\vulcan_tower2.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\raw_map3.json.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\raw\\map3.json"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_crossroad_right.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\crossroad_right.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\raw_map4.json.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\raw\\map4.json"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tlo.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\tlo.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_logoxd.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\logoxd.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tile_grass.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\tile_grass.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_magic_tower3.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\magic_tower3.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_right.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\slide_in_right.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_turn_right_down.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\turn_right_down.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bullet.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\bullet.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tile_grass.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\tile_grass.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\raw_map4.json.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\raw\\map4.json"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_magic_tower1.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\magic_tower1.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_enemy1.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\enemy1.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_out_left.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\slide_out_left.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_crossroad_left.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\crossroad_left.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gameover.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\gameover.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_highlight.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\highlight.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_in.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\fade_in.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_vulcan_tower1.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\vulcan_tower1.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_trees.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\trees.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_out_right.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\slide_out_right.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_play_pressed.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\play_pressed.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_enemy.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\enemy.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tile_mountain.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\tile_mountain.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tile_road.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\tile_road.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_vulcan_tower1.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\vulcan_tower1.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_menu_home.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\layout\\fragment_menu_home.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\raw_map2.json.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\raw\\map2.json"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_enemy.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\enemy.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_color.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\gradient_color.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_menu_play.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\layout\\fragment_menu_play.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\raw_map2.json.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\raw\\map2.json"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_highlight_red.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\highlight_red.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_magic_tower2.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\magic_tower2.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_map_button.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\map_button.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tlo2.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\tlo2.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_highlight_red.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\highlight_red.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_vertical_tile.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\vertical_tile.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_trees.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\trees.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_turn_right_down.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\turn_right_down.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tile_mountain.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\tile_mountain.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_button.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\rounded_button.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_towertop.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\towertop.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_out_left.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\slide_out_left.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_menu_settings.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\layout\\fragment_menu_settings.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\raw_map1.json.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\raw\\map1.json"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_button.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\rounded_button.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_map_button_pressed.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\map_button_pressed.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_archer_tower1.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\archer_tower1.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_vulcan_tower2.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\vulcan_tower2.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_custom_button.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\custom_button.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_arrow.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\arrow.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_out_right.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\slide_out_right.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_base.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\base.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_buy_menu.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\buy_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_zoom_out.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\zoom_out.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_menu_home.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\layout\\fragment_menu_home.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tlo.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\tlo.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_left.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\slide_in_left.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_buy_menu2.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\buy_menu2.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_right.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\slide_in_right.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_enemy1.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\enemy1.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_play_default.png.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\play_default.png"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_zoom_in.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\zoom_in.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_turn_left_down.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\turn_left_down.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_custom_button2.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\custom_button2.xml"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_custom_button2.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\custom_button2.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_logoxd.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\logoxd.png"
     },
     {
-        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_highlight.xml.flat",
-        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\highlight.xml"
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_magic_tower2.xml.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable-v24\\magic_tower2.xml"
+    },
+    {
+        "merged": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\mikol\\StudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     }
 ]
