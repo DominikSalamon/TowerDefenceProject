@@ -59,7 +59,7 @@ class Laser: Attack() {
 }
 
 class Bullet(drawables: Drawables, private var angle:Float): Attack() {
-    private val drawable = drawables.bullet
+    private val drawable = drawables.arrow
     private var posX = 0
     private var posY = 0
     private var tarX = 0

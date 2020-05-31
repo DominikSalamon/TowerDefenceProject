@@ -38,11 +38,12 @@ class EnemyManager(private val drawables: Drawables, private val wayPoints:  Arr
         return enemyList
     }
 
-    fun updateEnemies(){
+    @Synchronized fun updateEnemies(){
 
         val toDelete = arrayListOf<Enemy>()
 
         for(enemy in enemyList){
+            enemy.update()
 
             for(i in 0 until enemy.step){
                 if(enemy.reachedTarget()){
@@ -55,10 +56,11 @@ class EnemyManager(private val drawables: Drawables, private val wayPoints:  Arr
                         val targetY = wayPoints[enemy.targetIndex][1]
                         enemy.setTarget(targetX*tileSize,targetY*tileSize)
 
-
                     }
                     else {
+
                         player.money-=100
+                        player.health-=10
                         toDelete.add(enemy)
                     }
 
@@ -88,6 +90,11 @@ class EnemyManager(private val drawables: Drawables, private val wayPoints:  Arr
 
 class Enemy(drawables: Drawables,private val tileSize: Int){
     val  drawable = drawables.enemy
+    private var animatedDrawable = AnimatedDrawable(arrayOf(
+        drawables.enemy,
+        drawables.enemy1
+    ))
+
     private var x = 0
     private var y = 0
     var health = 100
@@ -110,12 +117,18 @@ class Enemy(drawables: Drawables,private val tileSize: Int){
     }
 
     fun draw(canvas: Canvas){
-        drawable?.setBounds(x, y,x+tileSize,y+tileSize)
-        drawable?.draw(canvas)
+       // drawable?.setBounds(x, y,x+tileSize,y+tileSize)
+       // drawable?.draw(canvas)
+
+        animatedDrawable.getDrawable().setBounds(x, y,x+tileSize,y+tileSize)
+        animatedDrawable.getDrawable().draw(canvas)
 
         paint.strokeWidth = 5F
         paint.color = Color.RED
         canvas.drawLine(x.toFloat(), y.toFloat(),x+health.toFloat(), y.toFloat(),paint)
+    }
+    fun update(){
+        animatedDrawable.update()
     }
 
     fun reachedTarget(): Boolean{

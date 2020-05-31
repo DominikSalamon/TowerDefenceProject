@@ -128,7 +128,7 @@ class ArcherTower(private val drawables: Drawables) : Tower() {
     override var name =  "Archer Tower"
     override var cost = 400
     override var radius = 300
-    override var interval = 300
+    override var interval = 900
     override var animatedDrawable = AnimatedDrawable(arrayOf(
         drawables.archerTower1
     ))
@@ -160,8 +160,8 @@ class ArcherTower(private val drawables: Drawables) : Tower() {
         super.draw(canvas)
 
         canvas.save()
-        canvas.rotate(topAngle+90, getX().toFloat()+50, getY().toFloat()+50)
-        topDrawable?.setBounds(getX(),getY(),getX()+100,getY()+100)
+        canvas.rotate(topAngle+90, getX().toFloat()+75, getY().toFloat()+75)
+        topDrawable?.setBounds(getX(),getY(),getX()+150,getY()+150)
         topDrawable?.draw(canvas)
         canvas.restore()
 
@@ -210,11 +210,7 @@ class VulcanTower(private val drawables: Drawables) : Tower() {
     override fun draw(canvas: Canvas){
         super.draw(canvas)
 
-        canvas.save()
-        canvas.rotate(topAngle+90, getX().toFloat()+50, getY().toFloat()+50)
-        topDrawable?.setBounds(getX(),getY(),getX()+100,getY()+100)
-        topDrawable?.draw(canvas)
-        canvas.restore()
+
 
     }
 

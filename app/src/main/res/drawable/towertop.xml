@@ -5,7 +5,11 @@
     android:width="100dp"
     android:height="100dp">
     <path
-        android:pathData="M45,10L40,80L60,80L55,10"
-        android:fillColor="#00B0B0" />
+    android:pathData="M5,50C45,10 55,10 95,50C45,20 55,20 5,50"
+    android:fillColor="#900303" />
+
+    <path
+        android:pathData="M5,50L95,50L95,49L5,49"
+        android:fillColor="#A0A0A0" />
 
 </vector>

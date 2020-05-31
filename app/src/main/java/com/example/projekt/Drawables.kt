@@ -6,11 +6,13 @@ import androidx.appcompat.content.res.AppCompatResources
 class Drawables(context: Context){
 
 
+    val zoomIn = AppCompatResources.getDrawable(context, R.drawable.zoom_in)
+    val zoomOut = AppCompatResources.getDrawable(context, R.drawable.zoom_out)
     val gameOver = AppCompatResources.getDrawable(context, R.drawable.gameover)
     val towerTop = AppCompatResources.getDrawable(context, R.drawable.towertop)
-    val bullet = AppCompatResources.getDrawable(context, R.drawable.bullet)
+    val arrow = AppCompatResources.getDrawable(context, R.drawable.arrow)
     val enemy = AppCompatResources.getDrawable(context, R.drawable.enemy)
-    //val enemy1 = AppCompatResources.getDrawable(context, R.drawable.enemy1)
+    val enemy1 = AppCompatResources.getDrawable(context, R.drawable.enemy1)
     val buyMenu2 = AppCompatResources.getDrawable(context, R.drawable.buy_menu2)
 
     val highlightRed = AppCompatResources.getDrawable(context, R.drawable.highlight_red)

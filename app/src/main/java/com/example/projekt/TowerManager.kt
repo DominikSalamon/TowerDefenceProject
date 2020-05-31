@@ -7,7 +7,7 @@ class TowerManager {
     private lateinit var enemyManager: EnemyManager
     private lateinit var attacksManager: AttacksManager
 
-    fun updateTowers() {
+    @Synchronized fun updateTowers() {
         for(tower in towerList)
             tower.update(enemyManager.getEnemyList(),attacksManager)
     }

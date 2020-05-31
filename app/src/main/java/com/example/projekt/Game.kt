@@ -137,9 +137,6 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
     override fun surfaceCreated(holder: SurfaceHolder) {
         Log.d("Game.kt","surfaceCreated")
 
-        holder.addCallback(this)
-        gameLoop = GameLoop(this, holder)
-        performance = Performance(context,gameLoop)
         gameLoop.startLoop()
     }
 
@@ -207,7 +204,7 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
 
     }
 
-    fun update() {
+   fun update() {
             if(!gameover){
                 ticker.update()
 
@@ -216,7 +213,7 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
                 enemyManager.updateEnemies()
                 attacksManager.updateAttacks()
 
-                if(enemyManager.countEnemies()<=3) enemyManager.spawnEnemy((Math.random()*3+2).toInt())
+                if(enemyManager.countEnemies()<1) enemyManager.spawnEnemy((Math.random()*3+2).toInt())
 
                 if(player.health<=0) {
                     gameover=true
