@@ -204,7 +204,7 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
 
     }
 
-   fun update() {
+    @Synchronized fun update() {
             if(!gameover){
                 ticker.update()
 
