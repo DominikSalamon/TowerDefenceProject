@@ -704,6 +704,7 @@ drawable highlight
 drawable highlight_red
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable lava
 drawable logoxd
 drawable magic_tower1
 drawable magic_tower2

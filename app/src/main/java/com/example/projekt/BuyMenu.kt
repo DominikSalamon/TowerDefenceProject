@@ -9,8 +9,8 @@ class BuyMenu(drawables: Drawables,private var tileSize:Int){
     private var drawable2 = drawables.buyMenu2
     private var x = 0
     private var y = 0
-    private var width = 500
-    private var height = 200
+    private var width = 450
+    private var height = 300
     private var visible = false
     private var items = ArrayList<Tower>()
     private var hX = 0f
@@ -86,7 +86,7 @@ class BuyMenu(drawables: Drawables,private var tileSize:Int){
                 paint.flags = Paint.ANTI_ALIAS_FLAG
                 paint.color = Color.BLACK
                 paint.textSize = 30f
-                canvas.drawText(items[i].name, (x+i*tileSize+10).toFloat(), y.toFloat()+240, paint)
+                canvas.drawText(items[i].name, (x+i*tileSize+10).toFloat(), y.toFloat()+220, paint)
                 canvas.drawText(items[i].cost.toString(), (x+i*tileSize+10).toFloat(), y.toFloat()+260, paint)
             }
         }

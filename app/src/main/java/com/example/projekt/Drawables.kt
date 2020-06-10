@@ -6,6 +6,7 @@ import androidx.appcompat.content.res.AppCompatResources
 class Drawables(context: Context){
 
 
+    val lava = AppCompatResources.getDrawable(context, R.drawable.lava)
     val zoomIn = AppCompatResources.getDrawable(context, R.drawable.zoom_in)
     val zoomOut = AppCompatResources.getDrawable(context, R.drawable.zoom_out)
     val gameOver = AppCompatResources.getDrawable(context, R.drawable.gameover)

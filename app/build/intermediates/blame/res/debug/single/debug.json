@@ -244,6 +244,10 @@
         "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\layout\\fragment_menu_home.xml"
     },
     {
+        "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lava.xml.flat",
+        "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\drawable\\lava.xml"
+    },
+    {
         "merged": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_left.xml.flat",
         "source": "C:\\Users\\Dominik\\AndroidStudioProjects\\TowerDefenceProject\\app\\src\\main\\res\\anim\\slide_in_left.xml"
     },

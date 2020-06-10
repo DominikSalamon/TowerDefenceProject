@@ -8,10 +8,11 @@ import android.graphics.Paint
 class EnemyManager(private val drawables: Drawables, private val wayPoints:  Array<IntArray>,private val tileSize: Int){
     private val enemyList = ArrayList<Enemy>()
     private lateinit var player: Player
+    private var enemiesPerSpawn = 1
     fun setPlayer(player: Player){
         this.player = player
     }
-    fun spawnEnemy(a: Int){
+    private fun spawnEnemy(a: Int){
         val x = wayPoints[0][0]
         val y = wayPoints[0][1]
 
@@ -57,33 +58,43 @@ class EnemyManager(private val drawables: Drawables, private val wayPoints:  Arr
                         enemy.setTarget(targetX*tileSize,targetY*tileSize)
 
                     }
-                    else {
-
-                        player.money-=100
-                        player.health-=10
-                        toDelete.add(enemy)
-                    }
-
                 }
-
                 enemy.move()
+            }
+
+           var toDel = false
+            if(enemy.targetIndex>=wayPoints.size){
+                player.money-=100
+                player.health-=10
+                toDel=true
             }
 
             if(enemy.health<=0){
                 player.money+=100
-                toDelete.add(enemy)
+                toDel=true
             }
 
+            if(toDel) toDelete.add(enemy)
+
         }
+
+
 
 
         enemyList.removeAll(toDelete)
 
 
+        if(countEnemies()<1) {
+            enemiesPerSpawn++
+            for(i in 1..enemiesPerSpawn){
+                spawnEnemy((Math.random()*5+3).toInt())
+            }
+
+        }
 
     }
 
-    fun countEnemies(): Int {
+    private fun countEnemies(): Int {
         return enemyList.size
     }
 }

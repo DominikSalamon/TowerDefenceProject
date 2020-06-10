@@ -73,6 +73,8 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
         enemyManager = EnemyManager(drawables, mapManager.getEnemyWayPoints(),tileSize)
         enemyManager.setPlayer(player)
 
+        attacksManager.setEnemyManager(enemyManager)
+
         towerManager.setEnemyManager(enemyManager)
         towerManager.setAttacksManager(attacksManager)
 
@@ -213,7 +215,7 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
                 enemyManager.updateEnemies()
                 attacksManager.updateAttacks()
 
-                if(enemyManager.countEnemies()<1) enemyManager.spawnEnemy((Math.random()*3+2).toInt())
+
 
                 if(player.health<=0) {
                     gameover=true

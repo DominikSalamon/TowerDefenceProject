@@ -102,7 +102,7 @@ abstract class Tower{
 
 
 class MagicTower(private val drawables: Drawables) : Tower() {
-    override var name = "Magic Tower"
+    override var name = "Magic"
     override var cost = 300
     override var radius = 200
     override var interval = 150
@@ -125,7 +125,7 @@ class MagicTower(private val drawables: Drawables) : Tower() {
 }
 
 class ArcherTower(private val drawables: Drawables) : Tower() {
-    override var name =  "Archer Tower"
+    override var name =  "Archer"
     override var cost = 400
     override var radius = 300
     override var interval = 900
@@ -146,14 +146,13 @@ class ArcherTower(private val drawables: Drawables) : Tower() {
     }
 
     override fun getAttack(): Attack {
-       return Bullet(drawables,topAngle)
+       return Arrow(drawables,topAngle)
     }
 
     override fun update(enemyList: ArrayList<Enemy>, attacksManager: AttacksManager){
-        super.update(enemyList, attacksManager)
-
         if(target!=null) topAngle = calcAngle()
 
+        super.update(enemyList, attacksManager)
     }
 
     override fun draw(canvas: Canvas){
@@ -175,43 +174,38 @@ class ArcherTower(private val drawables: Drawables) : Tower() {
 
 
 class VulcanTower(private val drawables: Drawables) : Tower() {
-    override var name =  "Vulcan Tower"
-    override var cost = 500
-    override var radius = 100
-    override var interval = 500
+    override var radius = 300
+    override var name =  "Vulcan"
+    override var cost = 1000
+    override var interval = 5000
     override var animatedDrawable = AnimatedDrawable(arrayOf(
         drawables.vulcanTower1,
         drawables.vulcanTower2
     ))
 
-    private var topDrawable = drawables.towerTop
-    private var topAngle = 0f
 
     override var reload = ticker.newTick(interval)
 
-    private fun calcAngle(): Float{
-        if(target!=null){
-            return (atan2(target!!.getY() - getY().toFloat(), target!!.getX() - getX().toFloat()) * 180 / PI).toFloat()
-        }
-        return 0f
+    override fun getAttack(): Attack {
+        return Lava(drawables,0,0)
     }
 
-    override fun getAttack(): Attack {
-        return Bullet(drawables,topAngle)
+    private fun randPos(): Int{
+        return (-radius..radius).random()
     }
+
 
     override fun update(enemyList: ArrayList<Enemy>, attacksManager: AttacksManager){
-        super.update(enemyList, attacksManager)
+        ticker.update()
+        animatedDrawable.update()
 
-        if(target!=null) topAngle = calcAngle()
+        if(reload.get()) {
 
-    }
+            for(i in 0..4){
+                attacksManager.addAttack(Lava(drawables,getX()+randPos(),getY()+randPos()))
+            }
 
-    override fun draw(canvas: Canvas){
-        super.draw(canvas)
-
-
-
+        }
     }
 
     override fun getClone(): VulcanTower{

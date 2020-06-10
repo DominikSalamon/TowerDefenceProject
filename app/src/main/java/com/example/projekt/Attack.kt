@@ -53,12 +53,14 @@ class Laser: Attack() {
     override fun draw(canvas: Canvas){
         super.draw(canvas)
         canvas.drawLine((attacker.getX()+50).toFloat(),
-            (attacker.getY()+50).toFloat(), (target.getX()+50).toFloat(),
+            (attacker.getY()+25).toFloat(), (target.getX()+75).toFloat(),
             (target.getY()+50).toFloat(),paint)
     }
 }
 
-class Bullet(drawables: Drawables, private var angle:Float): Attack() {
+
+
+class Arrow(drawables: Drawables, private var angle:Float): Attack() {
     private val drawable = drawables.arrow
     private var posX = 0
     private var posY = 0
@@ -110,12 +112,48 @@ class Bullet(drawables: Drawables, private var angle:Float): Attack() {
 
         canvas.save()
 
-        canvas.rotate(angle+90, posX+10f, posY+25f)
+        canvas.rotate(angle+90, 35+posX+10f, 35+posY+25f)
 
         drawable?.setBounds(70+posX,posY,70+posX+20,70+posY+50)
         drawable?.draw(canvas)
 
         canvas.restore()
+
+    }
+}
+
+
+class Lava(drawables: Drawables,var posX: Int,var posY: Int): Attack() {
+    private val drawable = drawables.lava
+
+    private var duration = 10000 // millis
+    private val killer = ticker.newTick(duration)
+
+    override var damage = 100
+    private var angle = 0
+
+    init{
+        angle = (0..360).random()
+    }
+
+    override fun update() {
+        super.update()
+
+        if(killer.get()){
+            ongoing = false
+        }
+    }
+
+    override fun draw(canvas: Canvas){
+        super.draw(canvas)
+        canvas.save()
+
+        canvas.rotate(angle.toFloat(), (posX+75).toFloat(), (posY+75).toFloat())
+        drawable?.setBounds(posX,posY,posX+150,posY+150)
+        drawable?.draw(canvas)
+
+        canvas.restore()
+
 
     }
 }
