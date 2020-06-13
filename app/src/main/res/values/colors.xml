@@ -7,4 +7,6 @@
     <color name="colorLight">#F0F0F0</color>
     <color name="colorDark">#3C3C3C</color>
     <color name="path">#A05000</color>
+    <color name="gold">#F0B040</color>
+    <color name="lightRed">#FF4444</color>
 </resources>

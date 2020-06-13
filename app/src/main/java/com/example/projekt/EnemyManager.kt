@@ -8,11 +8,17 @@ import android.graphics.Paint
 class EnemyManager(private val drawables: Drawables, private val wayPoints:  Array<IntArray>,private val tileSize: Int){
     private val enemyList = ArrayList<Enemy>()
     private lateinit var player: Player
-    private var enemiesPerSpawn = 1
+    private var enemiesToSpawn = 0
+    private var enemiesPerSpawn = 5
     fun setPlayer(player: Player){
         this.player = player
     }
+
+    private fun getEnemiesToSpawn(): Int{
+        return enemiesToSpawn
+    }
     private fun spawnEnemy(a: Int){
+        enemiesToSpawn--
         val x = wayPoints[0][0]
         val y = wayPoints[0][1]
 
@@ -33,6 +39,8 @@ class EnemyManager(private val drawables: Drawables, private val wayPoints:  Arr
         for(i in 0 until enemyList.size){
             enemyList[i].draw(canvas)
         }
+
+
     }
 
     fun getEnemyList(): ArrayList<Enemy> {
@@ -85,22 +93,24 @@ class EnemyManager(private val drawables: Drawables, private val wayPoints:  Arr
 
 
         if(countEnemies()<1) {
-            enemiesPerSpawn++
-            for(i in 1..enemiesPerSpawn){
-                spawnEnemy((Math.random()*5+3).toInt())
-            }
-
+            enemiesToSpawn=enemiesPerSpawn
+            enemiesPerSpawn+=1
         }
+
 
     }
 
+    fun spawnEnemies(){
+        if(getEnemiesToSpawn()>0) {
+            spawnEnemy((4..7).random())
+        }
+    }
     private fun countEnemies(): Int {
         return enemyList.size
     }
 }
 
 class Enemy(drawables: Drawables,private val tileSize: Int){
-    val  drawable = drawables.enemy
     private var animatedDrawable = AnimatedDrawable(arrayOf(
         drawables.enemy,
         drawables.enemy1
@@ -128,8 +138,7 @@ class Enemy(drawables: Drawables,private val tileSize: Int){
     }
 
     fun draw(canvas: Canvas){
-       // drawable?.setBounds(x, y,x+tileSize,y+tileSize)
-       // drawable?.draw(canvas)
+
 
         animatedDrawable.getDrawable().setBounds(x, y,x+tileSize,y+tileSize)
         animatedDrawable.getDrawable().draw(canvas)

@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.587" />
 
-    <Button
+    <!-- <Button
         android:id="@+id/button_settings"
         android:layout_width="250dp"
         android:layout_height="40dp"
@@ -48,6 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_play"
-        app:layout_constraintVertical_bias="0.489" />
+        app:layout_constraintVertical_bias="0.38" />
+        -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

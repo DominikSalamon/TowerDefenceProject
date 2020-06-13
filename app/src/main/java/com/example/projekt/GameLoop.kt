@@ -32,7 +32,7 @@ class GameLoop(private val game: Game, private val surfaceHolder: SurfaceHolder)
 
     }
 
-    override fun run() {
+   override fun run() {
         Log.d("GameLoop.kt","run")
         super.run()
         var updateCount = 0

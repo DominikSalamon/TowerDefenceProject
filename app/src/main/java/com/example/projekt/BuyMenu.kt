@@ -12,6 +12,7 @@ class BuyMenu(drawables: Drawables,private var tileSize:Int){
     private var width = 450
     private var height = 300
     private var visible = false
+    private var sellMenuVisibility = false
     private var items = ArrayList<Tower>()
     private var hX = 0f
     private var hY = 0f
@@ -36,20 +37,43 @@ class BuyMenu(drawables: Drawables,private var tileSize:Int){
 
     fun show(highlight: Highlight,realX: Int, realY: Int) {
         if(!isClicked(realX,realY)){
+            hideSellMenu()
+            hide()
+
             if(highlight.doubleTapped&&highlight.isActive()) {
-                show((highlight.getX() * tileSize).toInt() + 75, (highlight.getY() * tileSize).toInt())
-                hX=highlight.getX()
-                hY=highlight.getY()
+                if(towerManager.isPlaceFree(hX.toInt()*tileSize,hY.toInt()*tileSize)){
+
+                    show((highlight.getX() * tileSize).toInt() + 75, (highlight.getY() * tileSize).toInt())
+                }
+                else {
+
+                    showSellMenu((highlight.getX() * tileSize).toInt() + 75, (highlight.getY() * tileSize).toInt())
+                }
+
             }
-            else
-                hide()
+
+            hX=highlight.getX()
+            hY=highlight.getY()
         }
         else{
-            if(towerManager.isPlaceFree(hX.toInt()*tileSize,hY.toInt()*tileSize)){
-                for(i in 0 until items.size){
-                    if(items[i].isClicked(realX-getPosX1(),realY-getPosY1())){
-                        customer.buy(items[i].getClone(),boughtTowers,hX.toInt(),hY.toInt())
-                        break
+            if(sellMenuVisibility){
+                if(realY>getPosY1()&&realY<getPosY2()){
+                    if(realX<getPosX1()+width/2){
+                        val tower = towerManager.findTower(hX.toInt()*tileSize,hY.toInt()*tileSize)
+                        if (tower != null) {
+                            customer.sell(tower,towerManager)
+                        }
+                    }
+                    hideSellMenu()
+                }
+            }
+            else{
+                if(towerManager.isPlaceFree(hX.toInt()*tileSize,hY.toInt()*tileSize)){
+                    for(i in 0 until items.size){
+                        if(items[i].isClicked(realX-getPosX1(),realY-getPosY1())){
+                            customer.buy(items[i].getClone(),boughtTowers,hX.toInt(),hY.toInt())
+                            break
+                        }
                     }
                 }
             }
@@ -64,12 +88,43 @@ class BuyMenu(drawables: Drawables,private var tileSize:Int){
         visible = true
     }
 
+    private fun showSellMenu(X: Int, Y:Int) {
+        x = X - width / 2
+        y = Y - height
+        sellMenuVisibility = true
+    }
+
     private fun hide() {
         visible = false
+
+    }
+    private fun hideSellMenu() {
+        sellMenuVisibility= false
+
     }
 
 
+
     fun draw(canvas: Canvas) {
+        if(sellMenuVisibility){
+            drawable2?.setBounds( getPosX1()-1, getPosY1()-1, getPosX2()+1, getPosY2()+1)
+            drawable2?.draw(canvas)
+
+            drawable?.setBounds( getPosX1(), getPosY1(), getPosX2(), getPosY2())
+            drawable?.draw(canvas)
+
+            val paint = Paint()
+            paint.flags = Paint.ANTI_ALIAS_FLAG
+            paint.color = Color.BLACK
+            paint.textSize = 60f
+            canvas.drawText("Sell", getPosX1()+20f, getPosY1()+80f, paint)
+
+            paint.textSize = 40f
+            canvas.drawText("Yes", getPosX1()+20f, getPosY1()+height/1.5f, paint)
+            canvas.drawText("No", getPosX1()+width/1.5f, getPosY1()+height/1.5f, paint)
+
+        }
+
         if(visible){
             drawable2?.setBounds( getPosX1()-1, getPosY1()-1, getPosX2()+1, getPosY2()+1)
             drawable2?.draw(canvas)
@@ -101,8 +156,10 @@ class BuyMenu(drawables: Drawables,private var tileSize:Int){
     }
 
     private fun isVisible(): Boolean{
-        return visible
+        return visible||sellMenuVisibility
     }
+
+
 
     private fun getPosX1(): Int{
         return x

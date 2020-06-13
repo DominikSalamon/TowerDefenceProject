@@ -432,8 +432,10 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gold
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color lightRed
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -820,7 +822,6 @@ id button_mapa3
 id button_mapa4
 id button_play
 id button_play2
-id button_settings
 id cancel_action
 id center
 id center_horizontal

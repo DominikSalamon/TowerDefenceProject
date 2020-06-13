@@ -11,7 +11,7 @@ class Performance(context: Context,private var gameLoop: GameLoop){
     init{
         paint.flags = Paint.ANTI_ALIAS_FLAG
         paint.color = ContextCompat.getColor(context, R.color.colorDark)
-        paint.textSize = 40f
+        paint.textSize = 30f
     }
 
     fun draw(canvas: Canvas){
@@ -23,11 +23,11 @@ class Performance(context: Context,private var gameLoop: GameLoop){
 
     private fun drawUPS(canvas: Canvas) {
         val averageUPS = gameLoop.averageUPS.toInt().toString()
-        canvas.drawText("UPS: $averageUPS", 20f, 50f, paint)
+        canvas.drawText("UPS: $averageUPS", 20f, 120f, paint)
     }
 
     private fun drawFPS(canvas: Canvas) {
         val averageFPS = gameLoop.averageFPS.toInt().toString()
-        canvas.drawText("FPS: $averageFPS", 20f, 110f, paint)
+        canvas.drawText("FPS: $averageFPS", 20f, 160f, paint)
     }
 }

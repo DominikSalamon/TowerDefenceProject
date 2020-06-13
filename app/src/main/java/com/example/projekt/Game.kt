@@ -19,7 +19,6 @@ import androidx.annotation.RequiresApi
 
 
 
-
 lateinit var drawables: Drawables
 
 @RequiresApi(Build.VERSION_CODES.O)
@@ -39,7 +38,9 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
     private val towerManager: TowerManager
     private val attacksManager: AttacksManager
     private val ticker: Ticker
+    private val ranking: Ranking
     private var gameover = false
+    private var spawnInterval: Tick
 
     fun pause(){
         gameLoop.stopLoop()
@@ -47,9 +48,9 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
 
 
     init {
-        val surfaceHolder = holder
-        surfaceHolder.addCallback(this)
-        gameLoop = GameLoop(this, surfaceHolder)
+
+        holder.addCallback(this)
+        gameLoop = GameLoop(this, holder)
 
         isFocusable = true
 
@@ -58,6 +59,8 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
         towerManager = TowerManager()
         attacksManager = AttacksManager()
         ticker = Ticker()
+        spawnInterval = ticker.newTick(300)
+
 
         drawables = Drawables(context)
         buyMenu = BuyMenu(drawables,tileSize)
@@ -68,6 +71,8 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
 
         camera = Camera(screenWidth, screenHeight,mapManager)
 
+        ranking = Ranking(context)
+        ranking.readJSON()
 
 
         enemyManager = EnemyManager(drawables, mapManager.getEnemyWayPoints(),tileSize)
@@ -139,6 +144,10 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
     override fun surfaceCreated(holder: SurfaceHolder) {
         Log.d("Game.kt","surfaceCreated")
 
+        if(gameLoop.state == Thread.State.TERMINATED){
+            gameLoop = GameLoop(this, holder)
+        }
+
         gameLoop.startLoop()
     }
 
@@ -182,17 +191,16 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
 
         if(gameover) {
 
-
-
-            val drawable = drawables.gameOver
-            drawable?.setBounds(screenWidth/2-300,screenHeight/2-300,screenWidth/2+300,screenHeight/2+300)
-            drawable?.draw(canvas)
+            canvas.drawARGB(160,230,230,230)
 
             val paint = Paint()
             paint.flags = Paint.ANTI_ALIAS_FLAG
             paint.color = Color.BLACK
-            paint.textSize = 30f
-            canvas.drawText("GAMEOVER", screenWidth/2-100f, screenHeight/2f, paint)
+            paint.textSize = 60f
+            canvas.drawText("GAME OVER", screenWidth/2-225f, screenHeight/2f-400, paint)
+
+
+            ranking.draw(canvas,screenWidth/2-225f,screenHeight/2f-300)
 
 
         }
@@ -207,27 +215,43 @@ class Game(private val screenWidth: Int, private val screenHeight: Int, context:
     }
 
     @Synchronized fun update() {
+
             if(!gameover){
+
+
                 ticker.update()
-
-
                 towerManager.updateTowers()
+
                 enemyManager.updateEnemies()
+
+                if(spawnInterval.get()){
+                    enemyManager.spawnEnemies()
+                }
+
+
                 attacksManager.updateAttacks()
 
 
 
                 if(player.health<=0) {
                     gameover=true
+                    ranking.addRecord(System.currentTimeMillis(),player.money)
+                    ranking.sort()
+                    ranking.toJSON()
                 }
+
+
             }
 
 
-
-
-
-
-
     }
+
+
+
+
+
+
+
+
 
 }

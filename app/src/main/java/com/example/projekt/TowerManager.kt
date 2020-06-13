@@ -22,7 +22,7 @@ class TowerManager {
 
     fun drawTowers(canvas: Canvas) {
         for(i in 0 until towerList.size){
-            towerList[i].draw(canvas)
+             if(i<towerList.size)   towerList[i].draw(canvas)
         }
     }
 
@@ -40,5 +40,20 @@ class TowerManager {
         boughtTowers.forEach{
             towerList.add(it)
         }
+    }
+
+    fun removeTower(tower: Tower) {
+        towerList.remove(tower)
+    }
+
+    fun findTower(X: Int, Y:Int): Tower?{
+        var tower: Tower? = null
+        towerList.forEach{
+            if(it.collides(X,Y)){
+                tower = it
+                return tower
+            }
+        }
+        return tower
     }
 }
